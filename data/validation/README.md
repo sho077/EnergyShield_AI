@@ -2,12 +2,13 @@
 
 Reusable data-quality checks for the EnergyShield-AI reference datasets.
 
-Eleven scripts live here: one validator per reference dataset, plus
-`validate_phase1.py`, which runs them all and returns a single PASS/FAIL.
+Twelve scripts live here: one validator per reference dataset, plus
+`validate_phase1.py`, which runs the Phase 1 validators and returns a single
+PASS/FAIL.
 
 | Script | Dataset |
 | --- | --- |
-| `validate_phase1.py` | **runs everything below** |
+| `validate_phase1.py` | **runs every Phase 1 validator below** |
 | `validate_refineries.py` | `refineries.csv` |
 | `validate_strategic_reserves.py` | `strategic_reserves.csv` |
 | `validate_ports.py` | `ports.csv` |
@@ -18,6 +19,9 @@ Eleven scripts live here: one validator per reference dataset, plus
 | `validate_sanctions.py` | `sanctions.csv` |
 | `validate_energy_prices_reference.py` | `energy_prices_reference.csv` |
 | `validate_source_registry.py` | `source_registry.csv` |
+| `validate_network_links.py` *(Phase 2)* | `network_links.csv` + `pipelines.csv` |
+| `validate_computed_routes.py` *(Phase 2, step 5)* | `data/processed/computed_routes.csv` + `data/processed/route_segments.csv` |
+| `validate_network_connectivity.py` *(Phase 2, step 5, reporting only)* | Connectivity of `refineries.csv` + `ports.csv` + `strategic_reserves.csv` + `pipelines.csv` via `network_links.csv` |
 
 `_common.py` holds the shared `Report` class, CSV loader and generic checks
 (schema, identifiers, required fields, numerics, coordinates, provenance,
@@ -39,6 +43,48 @@ python data/validation/validate_phase1.py --quiet    # summary table only
 The suite runs each validator as a **separate process**, so one crashing cannot
 take the others down, and exits `0` only if every validator exits `0`. It also
 compares `refineries.csv` against a recorded SHA-256 baseline as a tamper hint.
+
+`validate_network_links.py` is **not** part of that suite and is run
+separately:
+
+```bash
+python data/validation/validate_network_links.py
+```
+
+It is kept out deliberately, so the Phase 1 result stays a fixed baseline that
+later phases can be regression-tested against rather than silently redefined.
+What it enforces, beyond the generic checks, is that **an edge is anchored to a
+record and never to a place**: both endpoints must resolve by id *and* their
+stored names must match the reference record character for character;
+`link_type` must agree with the endpoint types; `notes` must open `Evidence: `
+and say what the source `Establishes: `; and no field may contain inference
+wording (`proximity`, `nearby`, `assumed`, `presumably`, …).
+
+The computed-route validator runs the same way and is also kept out of the
+Phase 1 suite:
+
+```bash
+python data/validation/validate_computed_routes.py
+```
+
+Beyond the generic checks, it verifies that the computed layer in
+`data/processed/` stays reproducible and separate from `data/reference/`:
+every `route_id` resolves against `routes.csv`; every node id resolves
+against the reference dataset its prefix implies; no distance is negative or
+zero; every populated value carries a stated method; `routes.csv` still
+carries no distance/transit value of its own; there are no duplicate
+route/segment combinations; and — the check that matters most for a computed
+dataset — every `geodesic_haversine_r6371.0088km` segment is **independently
+recomputed** from `ports.csv`/`chokepoints.csv` coordinates and must match
+the stored value within 0.5 km.
+
+`validate_network_connectivity.py` is different in kind from every other
+script here: it is a **reporting tool, not a pass/fail gate**. It prints node
+and edge counts by type, connected components, and the isolated-node list
+from the reference network graph. It never fails on an isolated node, because
+an isolated node is very often the correct, honest state of a sourced graph —
+see `docs/network_connectivity_report.md` for the curated write-up of its
+output.
 
 Or a single dataset:
 

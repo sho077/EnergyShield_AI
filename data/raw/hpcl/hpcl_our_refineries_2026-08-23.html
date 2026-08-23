@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="icon" href="/images/favicon.ico">
+    <style type="text/css">@font-face {font-family:'Montserrat';font-style:normal;font-weight:100;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:100;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:100;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:100;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:100;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:200;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:200;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:200;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:200;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:200;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:300;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:300;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:300;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:300;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:300;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:400;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:400;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:400;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:400;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:400;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:500;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:500;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:500;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:500;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:500;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:600;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:600;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:600;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:600;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:600;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:700;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:700;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:700;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:700;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:700;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:800;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:800;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:800;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:800;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:800;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:900;src:url(/cf-fonts/v/montserrat/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:900;src:url(/cf-fonts/v/montserrat/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:900;src:url(/cf-fonts/v/montserrat/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Montserrat';font-style:normal;font-weight:900;src:url(/cf-fonts/v/montserrat/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}</style>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css?v=pUdlKUPhHdIeegw5-uN7hMbdJ95e__fqT0XN5DyTj4k">
+    <link rel="stylesheet" type="text/css" href="/css/icons.css?v=Ta0g3fzKCF4L2YjkD1fiZyUxHRU98veqYvI9P-vgQOg" />
+    <link rel="stylesheet" type="text/css" href="/css/slick.css?v=3yB_xIqfyxemOQjS9A2isp84OUDndGHQys9La9sugHA" />
+    <link rel="stylesheet" type="text/css" href="/css/slick-theme.css?v=_iNuk-kxEek1EqVxjb5syBLZ3EwryWeCSjK1GvYjtyE" />
+    <link rel="stylesheet" type="text/css" href="/css/slick-lightbox.css?v=MwjAHvB6zaLc8VEOElQkbX7ICfdu4YcvLIbMqNZIhcQ" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css?v=-kWs_2o2HeA3GUCzUp6dvL4HobXNeXF_5DnLK--bgaA" />
+    <link rel="stylesheet" type="text/css" href="/css/common.css?v=7Hd740IX2NVQ9l6VugwIggd4CQp-U85kdFOyHxuiuxE" />
+    
+
+    <link rel="stylesheet" type="text/css" href="/css/who-we-are.css?v=ftuKLc9luBwtaY1ZZ9vJYB3YduzFU-KmKXcnGnB77KU">
+    <link rel="stylesheet" type="text/css" href="/css/board-members.css?v=5mLehALEf_a-M8BH4rNabw-5hdBn_LXzH9thpmBB0vU">
+    <link rel="stylesheet" type="text/css" href="/css/financial.css?v=wCf0e3j02lI2I7Fr4YQNm1TDMbqt13cQuIAlPwoyQxg">
+    <link rel="stylesheet" type="text/css" href="/css/heritage.css?v=UhBefZzwXmf7KWO7EWxMomMtV2_CJV8t_WT-T-Vfzzc">
+    <link rel="stylesheet" type="text/css" href="/css/timeline.css?v=m-ZLMq2EQr7sxKf1ZqWm_dw8DryMycvJ4EmZDPWuggQ">
+    <link rel="stylesheet" type="text/css" href="/css/vision-mission.css?v=lm1O5IxSmAVsJk6tIS4L3VFLp30mOXKlmLgEiFGSbeE">
+    <link rel="stylesheet" type="text/css" href="/css/direct-sales.css?v=GUlb1fnWgZwgvGrUQExY0ditlDewgMWjUe2jOLWj0LI">
+    <link rel="stylesheet" type="text/css" href="/css/hp-gas.css?v=9yH1q-gaw2MH4895N2Cn9U0kZlwukff_GEUuoyJjZRA">
+    <link rel="stylesheet" type="text/css" href="/css/hp-retail.css?v=SXV5m7-E9qXlQCmjmzjihQ98lpKKFG83Mck1WGjYb1c">
+    <link rel="stylesheet" type="text/css" href="/css/rti.css?v=HSxR5z1_qxxjUTJPgtkG_X-lEOIsqSWMaUbisR4nH8w" />
+    <link rel="stylesheet" type="text/css" href="/css/substainability.css?v=flLpPFR7-4fz80bMF1lMNccdhUlk-xS1LQ2YNjzanOA">
+
+
+
+    
+                <title>HP Refineries | Oil Refinery | Hindustan Petroleum Refineries</title>
+                <meta name="description" content="HPCL owns and operates Refineries in Mumbai and Visakh with a capacity of 7.5 Million Metric Tonnes Per Annum (MMTPA) and 8.3 MMTPA, respectively.">
+                <meta name="keywords" content="HPCL, Refinery, Oil Refinery, HPCL Refinery, Mumbai Refinery, Visakhapatnam Refinery, Combined Refinery Thruput">
+        
+    <!-- Google Tag Manager -->
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    ' https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'G-G3VPXLQQ45');</script>
+    <!-- End Google Tag Manager -->
+    <style>
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=G-G3VPXLQQ45"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <script async src="https://cse.google.com/cse.js?cx=5d4af4a838b05851e" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <div id="loaderOverlay"><div class="custom-loader"><img src="/images/Loding1.gif" alt="loader" /> <span>Loading<span class="one">.</span><span class="two">.</span><span class="three">.</span></span></div></div>
+    <div class="wrapper home-wrapper">
+        <div class="support" style="right: 45px; bottom: 180px;">
+            <p>happy to help!</p>
+        </div>
+        <div class="support" style="right: 35px!important;">
+            
+            <p>click to start chat</p>
+        </div>
+        <a href="javascript:void(0)" id="return-to-top" class="scroll-top" title="scroll page up" style="z-index: 9999999999999999;">
+            <span class="scroll-inner d-flex align-items-center justify-content-center w-100 h-100">
+                <i class="icon icon-banner-arrow-left"></i>
+            </span>
+        </a>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="navbar-outer d-flex flex-column w-100">
+                <div class="navbar-top-section">
+                    <div class="container-fluid">
+                        <div class="d-flex justify-content-between flex-lg-row flex-column w-100">
+                            <div class="nav-logo-outer d-flex align-items-center">
+                                <a class="navbar-brand" href="../" title="Official Website of Hindustan Petroleum Corporation Limited, India">
+                                    <img src="/images/logo.png" loading="lazy" class="logo-light" alt="Official Website of Hindustan Petroleum Corporation Limited, India">
+                                </a>
+                                <hr class="nav-vertical-hr" />
+                            </div>
+                            <div class="collapse navbar-collapse navbar-secondary-menu" id="navbarSecondaryMenu">
+                                <div class="nav-right d-flex align-items-lg-center flex-column flex-lg-row ml-auto">
+                                    <div class="top-help-nav py-2 py-md-0">
+                                            <ul class="navbar-nav align-items-center flex-row">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="/pages/Complaints-and-Feedback">
+                                                        Complaints & Feedback
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    |
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" target="_blank" href="https://sales.hpcl.co.in/bportal/index_main.jsp">Login Dealer/Vendor</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    |
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="/contactus">Contact Us</a>
+                                                </li>
+                                            </ul>
+                                    </div>
+                                    <div class="delivering-hapiness-logo ml-lg-3 px-2 px-lg-0 text-left">
+                                        <a href="https://www.indiaenergyweek.com/" target="_blank"><img src="/images/IEW_Logo.jpg" loading="lazy" title="IEW_Logo" alt="IEW_Logo" /></a>
+                                    </div>
+                                    <div class="delivering-hapiness-logo ml-lg-3 px-2 px-lg-0 text-left">
+                                        <img src="/images/DHFPvajUQAAn58L-2.jpg" loading="lazy" title="emergency-helpline-dial-1906" alt="image of emergency-helpline-dial-1906" />
+                                    </div>
+                                    <div class="delivering-hapiness-logo ml-lg-3 px-2 px-lg-0 text-left">
+                                        <img src="/images/delivering-happiness.png" loading="lazy" alt="image of delivering happiness" title="delivering happiness" />
+                                    </div>
+                                    <hr class="nav-vertical-hr">
+                                    <div class="d-flex align-items-center px-2 px-lg-0">
+                                        <div class="theme-change">
+                                            <ul class="mb-0 d-flex">
+                                                <li>
+                                                    <div class="theme-item theme-1 dark" title="High Contrast view"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="theme-item theme-2 light" title="Standard view"></div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="font-adjust">
+                                            <ul class="d-flex mb-0">
+                                                <li>
+                                                    <a href="javascript:void(0);" id="max" onclick="if (!window.__cfRLUnblockHandlers) return false; set_font_size('increase')" title="Increase Font Size" data-cf-modified-97a525c0b43673c75e33667f-="">A+</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" id="normal" onclick="if (!window.__cfRLUnblockHandlers) return false; set_font_size('')" title="Default Font Size" data-cf-modified-97a525c0b43673c75e33667f-="">A</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0);" id="min" onclick="if (!window.__cfRLUnblockHandlers) return false; set_font_size('decrease')" title="Decrease Font Size" data-cf-modified-97a525c0b43673c75e33667f-="">A-</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="news-lang align-items-center">
+                                            <ul class="d-flex mb-0 align-items-center">
+                                                <li>
+                                                    <a href="/pages/screen-reader-access" title="screen reader access">
+                                                        <span hidden>screen reader access</span>
+                                                        <span class="icon icon-news"></span>
+                                                    </a>
+                                                </li>
+                                                <li class="dropdown lang-dropdown">
+                                                    <a class="dropdown-toggle" title="Change language in Hindi" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('Do you want to change website language in Hindi?');" role="button" id="language" href="/Language?ReturnUrl=%2Fhp-refineries&amp;handler=Return" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            <span class="icon icon-language-hindi"></span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="nav-social-links mr-3 py-2 px-2 px-lg-0">
+                                        <ul class="d-flex mb-0">
+                                            <li>
+                                                <a href="https://twitter.com/HPCL" target="_blank" title="twitter" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                    <span class="icon icon-twitter"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.facebook.com/hpcl" target="_blank" title="facebook" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                    <span class="icon icon-facebook"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/hpcl/" target="_blank" title="instagram" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                    <span class="icon icon-Instagram"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://in.linkedin.com/company/hpcl" target="_blank" title="linkedin" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                    <span class="icon icon-linkedin"></span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/hindustanpetroleum74/" target="_blank" title="youtube" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                    <span class="icon icon-video-play"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-menu-section menu-area" id="menu_area">
+                    <div class="container-fluid px-0 mainmenu">
+                        <div class="d-flex justify-content-between w-100">
+                            <button class="navbar-toggler hamburger-menu-button" onclick="if (!window.__cfRLUnblockHandlers) return false; navclick('navbarPrimaryMenu')" id="hamburger-menu" type="button" data-toggle="collapse" data-target="#navbarSecondaryMenu" aria-controls="navbarSecondaryMenu" aria-expanded="false" aria-label="Toggle navigation" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                <!-- <span class="navbar-toggler-icon"></span> -->
+                                <span class="hamburger-menu-button-open">Menu</span>
+                            </button>
+                            <button class="navbar-toggler hamburger-menu-button" onclick="if (!window.__cfRLUnblockHandlers) return false; navclick('navbarSecondaryMenu')" id="hamburger-menu1" type="button" data-toggle="collapse" data-target="#navbarPrimaryMenu" aria-controls="navbarPrimaryMenu" aria-expanded="false" aria-label="Toggle navigation" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                <!-- <span class="navbar-toggler-icon"></span> -->
+                                <span class="hamburger-menu-button-open">Menu</span>
+                            </button>
+                        </div>
+                        <div id="navbarPrimaryMenu" class="collapse navbar-collapse">
+                            
+<ul class="navbar-nav flex-grow-1 main-menu-nav-wrap">
+    <li class="nav-item active">
+            <a id="lnkHome" href="../" class="nav-link">Home </a>
+    </li>
+
+
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="About Us">
+                                    About Us
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/who-we-are">
+                                                            Who We Are
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-heritage">
+                                                            HP Heritage
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/vision-and-mission">
+                                                            Vision and Mission
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/board-of-directors">
+                                                            Board of Directors
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/awards-and-accolades">
+                                                            Awards and Accolades
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/organisational-chart">
+                                                            Organisational Chart
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/joint-ventures-and-subsidiaries">
+                                                            Joint Ventures and subsidiaries
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/right-to-information">
+                                                            Right to Information
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/vigilance">
+                                                            Vigilance
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/corporategovernance">
+                                                            Corporate Governance
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Our Operations">
+                                    Our Operations
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-refineries">
+                                                            HP Refineries
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/hp-supplies-operations-and-distribution">
+                                                            HP Supplies, Operations and Distribution (SOD)
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-research-and-development">
+                                                            HP Research and Development
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-international-trade">
+                                                            HP International Trade
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                    <a class="nav-link" href="javascript:void(0);">
+                                                        HP Projects and Pipelines
+                                                        <div class="nav-item-arrow"></div>
+                                                    </a>
+                                                <ul style="height:300px; max-height:300px; overflow:auto;">
+
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/hp-pipeline-projects-and-operations">
+                                                                        HP Pipeline Projects and Operations
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/hp-engineering-and-projects">
+                                                                        HP Engineering and Projects
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/common-carrier-product-pipelines">
+                                                                        Common Carrier Product Pipelines
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pipeline-safety">
+                                                                        Pipeline Safety
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="https://pipelinenoc.hpcl.co.in">
+                                                                        Pipeline Crossing Permission Portal
+
+                                                                    </a>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Our Businesses">
+                                    Our Businesses
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-biofuels-and-renewables">
+                                                            HP Biofuels and Renewables
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-retail" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            HP Retail (Petrol Pumps)
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-gas">
+                                                            HP Gas (LPG)
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="http://www.hplubricants.in/&#xD;&#xA;" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            HP Lubricants
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-aviation" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            HP Aviation
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-directsales" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            HP Direct Sales
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-natural-gas">
+                                                            HP Natural Gas
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-petrochemicals">
+                                                            HP Petrochemicals
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-non-fuel-business">
+                                                            HP Non Fuel Business
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Sustainability &amp; CSR">
+                                    Sustainability &amp; CSR
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/corporate-social-responsibility">
+                                                            Corporate Social Responsibility
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/health-at-hpcl">
+                                                            Health at HPCL
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/safety-at-hpcl">
+                                                            Safety at HPCL
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/environment-at-hpcl">
+                                                            Environment at HPCL
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/sustainability">
+                                                            Overview
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/Regulatory-Requirements">
+                                                            Regulatory Requirements
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://www.hindustanpetroleum.com/pages/un-global-compact">
+                                                            UNGC (GLOBAL COMPACT)
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Media &amp; Updates">
+                                    Media &amp; Updates
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/media-kit">
+                                                            Media Kit
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/newsroom">
+                                                            Newsroom
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/major-ongoing-projects">
+                                                            Major Ongoing Projects
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Investors">
+                                    Investors
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://hindustanpetroleum.com/pages/Debentureholder-Information">
+                                                            Debenture-Holders-Information
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="analystsinstitutionalinvestorsmeet">
+                                                            Analysts / Institutional Investors
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                    <a class="nav-link" href="javascript:void(0);">
+                                                        Overview
+                                                        <div class="nav-item-arrow"></div>
+                                                    </a>
+                                                <ul style="height:300px; max-height:300px; overflow:auto;">
+
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/Contact-for-Shareholder">
+                                                                        Contact for Shareholder
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/corporate-information">
+                                                                        Corporate Information
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/board-level-committees">
+                                                                        Board Level Committees
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/equityhistory">
+                                                                        Equity History
+
+                                                                    </a>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                    <a class="nav-link" href="javascript:void(0);">
+                                                        Shareholders Information
+                                                        <div class="nav-item-arrow"></div>
+                                                    </a>
+                                                <ul style="height:300px; max-height:300px; overflow:auto;">
+
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/memorandum-of-association-and-articles-of-association">
+                                                                        Memorandum of Association and Articles of Association
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/terms-and-conditions-of-appointment-of-independent-directors">
+                                                                        Terms And Conditions of Appointment of Independent Directors
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/saksham-niveshak">
+                                                                        Saksham Niveshak
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/annual-reports">
+                                                                        Annual Reports
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/shareprice">
+                                                                         Share Price &amp; Crude Oil Price
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/dividend-information">
+                                                                        Dividend Information
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/investors-guide">
+                                                                        Investors Guide
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/AGMDetails">
+                                                                         AGM Details
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/hpcl-buy-back-of-shares">
+                                                                        HPCL Buy Back of Shares
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/shareholding-profile">
+                                                                        Shareholding Profile
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="https://www.bseindia.com/stockinfo/index.htm?scrip_cd=500104" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                                        BSE Stockwatch
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="https://www1.nseindia.com/companytracker/cmtracker.jsp?symbol=hindpetro" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                                        NSE Market Tracker
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="https://www.hindustanpetroleum.com/postalballot">
+                                                                        Postal Ballot
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/iepf">
+                                                                        IEPF
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/Unclaimed-Dividend">
+                                                                        Unclaimed Dividend
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/depository-system">
+                                                                        Depository System
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/financial">
+                                                                        Financial Performance
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/forms-for-kyc-updation-&amp;-other-service-requests">
+                                                                        Forms for KYC Updation &amp; Other Service Requests
+
+                                                                    </a>
+                                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/pages/Special-Window-for-Transfer-Requests">
+                                                                        Special Window for Transfer Requests
+
+                                                                    </a>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/stockexchange">
+                                                            Stock Exchange Filings
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/policies">
+                                                            Policies
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Careers">
+                                    Careers
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/job-openings">
+                                                            Job Openings
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/careers">
+                                                            Careers Overview
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/career-contactus">
+                                                            Contact Us
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                    <a class="nav-link" href="javascript:void(0);">
+                                                        Life at HPCL
+                                                        <div class="nav-item-arrow"></div>
+                                                    </a>
+                                                <ul style="height:300px; max-height:300px; overflow:auto;">
+
+                                                        <li class="nav-item dropdown">
+                                                                    <a class="nav-link dropdown-toggle" href="/swayam">
+                                                                        Swayam
+
+                                                                    </a>
+                                                        </li>
+                                                </ul>
+                                            </li>
+                            </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="javascript:void(0);" title="Quick Links">
+                                    Quick Links
+                                    <div class="nav-item-arrow"></div>
+                                </a>
+
+                            <ul>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/our-is-offerings">
+                                                            Our IS Offerings
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://www.hindustanpetroleum.com/pages/Stakeholder-Portal">
+                                                            Stakeholder Portal
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/hp-alumni">
+                                                            HP Alumni
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/business-opportunities">
+                                                            Business Opportunities
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://hproroute.hpcl.co.in/StateDistrictMap_4/index.jsp" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            Prices of Petrol/Diesel
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/purchase-procurement">
+                                                            Procurement
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://vendor.hpcl.co.in/vendor_reg/" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">
+                                                            Vendor Registration
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/transparency-portal">
+                                                            Transparency Portal
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="/pages/Regulatory-Requirements">
+                                                            Regulatory Requirements
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://lpgprice.hpcl.co.in/lpgprice/lpgprice">
+                                                            Prices of LPG (Domestic / Non-Domestic)
+                                                        </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                        <a class="nav-link" href="https://www.hindustanpetroleum.com/shareprice">
+                                                            Share Price &amp; Crude Oil Price
+                                                        </a>
+                                            </li>
+                            </ul>
+                    </li>
+</ul>
+                            <div class="nav-search pr-4 pl-lg-4 pl-2 py-2">
+                                <div class="form-inline my-2 my-lg-0 ml-2" id="search">
+                                    <div class="d-flex nav-search-outer">
+                                        <input class="form-control flex-grow-1" type="search" placeholder="Search" aria-label="Search" id="output" name="output">
+                                        <a class="btn btn-primary" id="datasubmit" href="javascript:void(0)" title="search">
+                                            <span class="icon icon-search"> </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+<style type="text/css">@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.2.7/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:600;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.2.7/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.2.7/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Nunito Sans';font-style:normal;font-weight:900;src:url(/cf-fonts/v/nunito-sans/5.2.7/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}</style>
+<script src="https://kit.fontawesome.com/4b9ba14b0f.js" crossorigin="anonymous" type="97a525c0b43673c75e33667f-text/javascript"></script>
+<style>
+
+
+    .mainbox {
+        background-color: #95c2de;
+        margin: auto;
+        height: 600px;
+        width: 600px;
+        position: relative;
+    }
+
+    .err {
+        color: #ffffff;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 11rem;
+        position: absolute;
+        left: 20%;
+        top: 8%;
+    }
+
+    .far {
+        position: absolute;
+        font-size: 8.5rem;
+        left: 42%;
+        top: 15%;
+        color: #ffffff;
+    }
+
+    .err2 {
+        color: #ffffff;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 11rem;
+        position: absolute;
+        left: 68%;
+        top: 8%;
+    }
+
+    .msg {
+        /*   text-align: center;*/
+        text-align: left;
+        font-family: 'Nunito Sans', sans-serif;
+        font-size: 1.6rem;
+        position: absolute;
+        left: 16%;
+        top: 45%;
+        width: 75%;
+    }
+
+    a {
+        text-decoration: none;
+        /* color: white;*/
+    }
+
+        a:hover {
+            text-decoration: underline;
+        }
+</style>
+
+
+    
+
+
+
+<header class="header header-without-slider  hp-refineries d-flex align-items-end pb-0">
+<img src="/images/Mumbai1.jpg" alt="banner of HP Refineries" class="header-banner" loading="lazy">
+<div class="inner-header-content w-100 h-100 d-flex align-items-center px-3">
+<div class="row w-100">
+<div class="col-md-6">
+<div class="inner-header-items">
+<div class="breadcrumbs">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb mb-1">
+<li class="breadcrumb-item"><a href="/">Home</a></li>
+<li class="breadcrumb-item active" aria-current="page">Our Businesses</li>
+</ol>
+</nav>
+</div>
+<h3 class="inner-page-heading">HP Refineries</h3>
+</div>
+</div>
+</div>
+</div>
+</header>
+<section class="rti-overview">
+<div class="container">
+<div class="sprt-container py-4">
+<div class="row align-items-center">
+<div class="col-md-12 col-lg-12">
+<p>
+</p>
+<h2>About Us</h2>
+<p align="justify">HPCL owns and operates Refineries in Mumbai and Visakhapatnam  with a capacity of <!--7.5-->9.5 Million Metric Tonnes Per Annum (MMTPA) and 15.0 MMTPA, respectively. HPCL also owns India’s largest Lube Refinery in Mumbai, producing lube oil base stocks with a capacity of 428 Thousand Metric Tonnes Per Annum (TMTPA). Both Mumbai and Visakh Refineries have been upgraded to produce BS-VI compliant transportation fuels.</p>
+<p align="justify">HPCL holds a 48.99% equity stake in the JV company, HPCL-Mittal Energy Limited (HMEL), which operates an 11.3 MMTPA capacity Refinery at Bhatinda in Punjab. It also owns a 16.96% equity stake in the 15 MMTPA Mangalore Refinery and Petrochemicals Ltd. (MRPL). A new 9 MMTPA Greenfield Refinery-cum-Petrochemical complex is being set up at Pachpadra in the Barmer district of Rajasthan through a joint venture company, HPCL Rajasthan Refinery Limited (HRRL) with equity stake of 74%. The Project achieved Scheduled Commercial Operation and was dedicated to Nation by Honourable  Prime Minister on 4th July 2026.</p>
+</div>
+</div>
+			
+<div class="row align-items-center">
+<div class="col-md-12 col-lg-12">
+<h2>Refining Performance</h2>
+<p align="justify">The year 2025–26 stands as a landmark year for HPCL Refineries, marked by exceptional operational and physical performance. Driven by a combination of proactive planning, technology-enabled optimisation and agile decision-making, HPCL achieved its highest-ever crude throughput of 26.04 million metric tonnes (MMT), surpassing the previous record of 25.27 MMT achieved in 2024–25. The Visakh Refinery delivered an outstanding performance by processing its highest-ever annual crude throughput of 16.04 MMT.  The Mumbai Refinery also demonstrated strong operational excellence, achieving a highest ever annual crude throughput of 10.00 MMT. Residual Upgrdation Facility (RUF)  was commissioned in Visakh Refinery during the Year.</p>
+<div class="field-item even table-responsive">	 									
+<table class="table table-striped table-hover">
+<thead>
+<tr>
+<th></th>
+<th>2025-26</th>
+<th>2024-25</th>
+<th>2023-24</th>
+<th>2022-23</th>
+<th>2021-22</th>
+<th>2020-21</th>
+</tr>
+</thead><thead>
+</thead><tbody>
+<tr>
+<td>Mumbai Refinery Thruput</td>
+<td>10.00 MMT</td>
+<td>9.96 MMT</td>
+<td>9.64 MMT</td>
+<td>9.80 MMT</td>
+<td>5.56 MMT</td>
+<td>7.37 MMT</td>
+</tr>
+<tr>
+<td>Visakh Refinery Thruput</td>
+<td>16.04 MMT</td>
+<td>15.31 MMT</td>
+<td>12.69 MMT</td>
+<td>9.29 MMT</td>
+<td>8.41 MMT</td>
+<td>9.05 MMT</td>
+</tr>
+<tr>
+<td>Combined Refinery Thruput</td>
+<td>26.04 MMT</td>
+<td>25.27 MMT</td>
+<td>22.33 MMT</td>
+<td>19.09 MMT</td></tr>
+</tbody>
+</table>
+</div>                    
+</div>
+</div>
+			
+<div class="row py-4">
+<div class="col-md-6 col-lg-6 mb-3">
+<div class="board-mbr-item d-flex h-100">
+<div class="board-mbr-image col" style="background-image: url('../images/Mumbai.jpg');"><img src="../images/Mumbai.jpg" alt="Mumbai Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-3 py-3 col">
+<h4 id="mumbairefinery">Mumbai Refinery (9.5 MMTPA)</h4>
+<p align="justify">Mumbai Refinery was commissioned in 1954 by the erstwhile ESSO with a crude refining capacity of 1.25 MMTPA. The capacity was increased to 9.5 MMTPA, in phases.</p>
+<div class="board-mbr-links d-flex flex-column">
+<a href="javacript:void(0);" data-toggle="modal" data-target="#exampleModal" class="board-mbr-link"><span class="icon icon-View-Profile" aria-describedby="mumbairefinery"></span>
+<span>Read More...</span></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-6 mb-3">
+<div class="board-mbr-item d-flex h-100">
+<div class="board-mbr-image col" style="background-image: url('../images/Visakhapatnam.jpg');"><img src="../images/Visakhapatnam.jpg" alt="Visakhapatnam Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-3 py-3 col">
+<h4 id="visakhapatnamrefinery">Visakhapatnam Refinery (15.0 MMTPA)</h4>
+<p>Visakh Refinery was the first East Coast Oil Refinery commissioned in 1957 by Caltex Oil Refining India Ltd.</p>
+<div class="board-mbr-links d-flex flex-column">
+ <a href="javacript:void(0);" data-toggle="modal" data-target="#exampleModal1" class="board-mbr-link" aria-describedby="visakhapatnamrefinery">
+<span class="icon icon-View-Profile"></span>
+<span>Read More...</span></a>
+ </div>
+</div>
+</div>
+</div>
+
+
+<div class="col-md-6 col-lg-6 mb-3">
+<div class="board-mbr-item d-flex h-100">
+<div class="board-mbr-image col" style="background-image: url('../images/Luberefinery.jpg');"><img src="../images/Luberefinery.jpg" alt="Mumbai Lubes Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-3 py-3 col">
+<h4 id="mumbailubesrefinery">Mumbai Lubes Refinery (428 TMT) </h4>
+<p>The Lube Refinery was commissioned in 1969 as a joint venture between ESSO &amp; the Government of India.</p>
+<div class="board-mbr-links d-flex flex-column">
+<a href="javacript:void(0);" data-toggle="modal" data-target="#exampleModal2" class="board-mbr-link" aria-describedby="mumbailubesrefinery">
+<span class="icon icon-View-Profile"></span>
+<span>Read More...</span></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-6 mb-3">
+<div class="board-mbr-item d-flex h-100">
+<div class="board-mbr-image col">
+<img src="../images/HMEL.jpg" alt="HPCL-Mittal Energy Ltd." class="img-fit">
+</div>
+<div class="board-mbr-desc px-3 py-3 col">
+<h4 id="hpclmittalenergy">HPCL-Mittal Energy Ltd. (11.3 MMTPA)</h4>
+<p>HMEL is a joint venture between HPCL and Mittal Energy Investments Pte Ltd.</p>
+<div class="board-mbr-links d-flex flex-column">
+ <a href="javacript:void(0);" data-toggle="modal" data-target="#exampleModal3" class="board-mbr-link" aria-describedby="hpclmittalenergy">
+<span class="icon icon-View-Profile"></span>
+<span>Read More...</span></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-6 mb-3">
+<div class="board-mbr-item d-flex h-100">
+<div class="board-mbr-image col"><img src="../images/MRPLrefin.jpg" alt="Mangalore Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-3 py-3 col">
+<h4 id="manglorerefinery">Mangalore Refinery &amp; Petrochemical Ltd (15 MMTPA)</h4>
+<p>Mangalore Refinery and Petrochemicals Ltd. (MRPL) is a joint venture of HPCL.</p>
+<div class="board-mbr-links d-flex flex-column">
+ <a href="javacript:void(0);" data-toggle="modal" data-target="#exampleModal14" class="board-mbr-link" aria-describedby="manglorerefinery">
+<span class="icon icon-View-Profile"></span>
+<span>Read More...</span></a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="row align-items-center">
+<div class="col-md-12 col-lg-12">
+<h2>Ongoing Projects</h2>										
+
+
+<p><strong>Rajasthan Refinery Limited (HRRL)</strong></p>
+<p align="justify">HPCL Rajasthan Refinery Limited (HRRL) is a joint venture between Hindustan Petroleum Corporation Limited (HPCL) and the Government of Rajasthan (GoR), with an equity participation of 74% by HPCL and 26% by GoR.</p> 
+<p><strong>Project Information:</strong></p>
+<p align="justify">HRRL has established a 9.0 MMTPA refinery-cum-petrochemical complex at Pachpadra, Tehsil Balotra, Rajasthan, including 2.4 MMTPA of petrochemical capacity. The refinery is designed to process 1.5 MMTPA of Rajasthan crude and 7.5 MMTPA of imported crude, with the flexibility to process 9.0 MMTPA of imported crude.</p>
+<p align="justify">The complex comprises 13 process units, along with associated utilities, crude oil and water pipeline networks, and a crude oil terminal.</p>
+<p><strong>Current Status</strong></p>
+<p>The Refinery section has been completed and commissioned. The facility was dedicated to the Nation by the Hon’ble Prime Minister on 4 July 2026.</p>
+<p><strong>Lube Modernization and Bottoms Upgradation Project at Mumbai Refinery</strong></p>
+<p>HPCL commenced work on the ‘Lube Modernization and Bottoms Upgradation Project’ at Mumbai Refinery. The project shall enhance the Lube Oil Base Stocks (LOBS) production of the refinery from current 475 KTPA to 764 KTPA, with production of superior grade Group II+ and Group III LOBS. Production of Bitumen will also increase by approx. 487 KTPA with upgradation of Fuel Oil to Bitumen. Additionally, this project will also result in distillate yield improvement of the Refinery by around 4%.</p>
+</div>
+</div>
+			
+<br>
+
+<div class="row align-items-center">
+<div class="col-md-12 col-lg-12">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/Mumbai.jpg" alt="Mumbai Refinery" class="img-fit">
+</div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>Mumbai Refinery</h4>
+<p class="board-mbr-desc-text">Mumbai Refinery was commissioned in 1954 by the erstwhile ESSO with a crude refining capacity of 1.25 MMTPA. The capacity was increased to 9.5 MMTPA, in phases. In 1974, the Government of India nationalized ESSO operations and formed Hindustan Petroleum Corporation Limited.</p>
+<p class="board-mbr-desc-text">Mumbai Refinery sources its crude from both imported and indigenous sources. Imported crude is transported through marine tankers berthed at Jawahar Dweep jetty and pumped to Refinery Crude storage tanks. Indigenous crude mainly Mumbai High (MH) is pumped from ONGC offshore terminal into Refinery Crude storage tanks.</p>
+<p class="board-mbr-desc-text">The products currently manufactured by Mumbai Refinery are LPG, Naphtha, Motor Spirit (MS), Food Grade Hexane, Aviation Turbine Fuel (ATF), Superior Kerosene Oil (SKO), High Speed Diesel (HSD), Light Diesel Oil (LDO), Low Sulphur Heavy Stock (LSHS), Industrial Furnace Oil (IFO), Rubber Processing Oil, Lube Oil Base Stocks (LOBS), Bitumen, Sulphur, etc.</p>
+<p class="board-mbr-desc-text">These products are evacuated to the marketing terminals, coastally moved through tankers and most of the product evacuation is carried out to various consumption points through Mumbai Pune Sholapur Pipeline (MPSPL).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+<!-- Modal -->
+	
+<div class="modal fade" id="exampleModal14" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/MRPLrefin.jpg" alt="Mangalore Refinery &amp; Petrochemical Ltd " class="img-fit"></div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>Mangalore Refinery &amp; Petrochemical Ltd </h4>
+<p class="board-mbr-desc-text">Mangalore Refinery and Petrochemicals Ltd. (MRPL) is a joint venture of HPCL and ONGC wherein ONGC holds 71.63% of equity, HPCL holds 16.96% equity, and balance equity is held by public. MRPL operates 15 MMTPA refinery at Mangalore in Karnataka.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/HMEL.jpg" alt="HPCL-Mittal Energy Ltd" class="img-fit"></div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>HPCL-Mittal Energy Ltd.</h4>                                
+<p class="board-mbr-desc-text">HMEL is a joint venture between HPCL and Mittal Energy Ltd, with equity holding of 48.99% each.</p>
+<p class="board-mbr-desc-text">HMEL is a leading integrated refining and petrochemical company in India with operations that span crude oil refining, petrochemical production &amp; marketing. It owns and operates a 11.3 MMTPA Guru Gobind Singh Refinery (GGSR), including various ancillary facilities near Bathinda, in Punjab.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/Visakhapatnam.jpg" alt="Visakhapatnam Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>Visakhapatnam Refinery </h4>
+<p class="board-mbr-desc-text">Visakh Refinery was the first East Coast Oil refinery of India, commissioned in 1957 by Caltex Oil Refining India Ltd. (CORIL)  with a crude processing capacity of 0.675 MMTPA. The refinery has been expanded in phases to 15.0 MMTPA.  Caltex Refinery, along with its marketing facilities were nationalized in 1976 and amalgamated with HPCL in 1978.</p>
+<p class="board-mbr-desc-text">Visakh Refinery, till 1985, used to receive indigenous and imported crude through tankers cargo up to 30 TMT from the Oil Wharf Jetties located in Visakhapatnam Port Trust (VPT). Offshore Tanker Terminal (OSTT) was commissioned by VPT for crude unloading through Suez max tanker. The draft limitations at Jetty were restricting bigger size vessels. To overcome this limitation, Visakh Refinery constructed Single Point Mooring (SPM) for discharging of Very Large Crude Carrier (VLCC).</p>
+<p class="board-mbr-desc-text">The products currently manufactured in Refinery are LPG, Propylene, Naphtha, MS, ATF, SKO, HSD, LDO, LSHS, IFO, Bitumen, Sulphur, VLSFO  etc.</p>
+<p class="board-mbr-desc-text">These products are evacuated to the marketing terminals, coastally moved through tankers and also transferred through cross-country pipeline from Visakhapatnam to Secunderabad via Vijayawada (VVSPL) &amp; its extension from Vijayawada to Dharmapuri (VDPL).</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/Luberefinery.jpg" alt="Mumbai Lubes Refinery" class="img-fit"></div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>Mumbai Lubes Refinery</h4>                                
+<p class="board-mbr-desc-text">The Lube Refinery was commissioned in 1969 as a joint venture between ESSO &amp; Government of India with a capacity of 165 Thousand Metric Tonnes Per Annum (TMTPA) of Lubricating Oil Base Stocks. Subsequently, the joint venture, Lube India Ltd., was taken over by Government of India and merged with HPCL. With the demand for Lube Oil Base Stocks going up, further de-bottlenecking and expansion increased the capacity to 428 TMTPA. Today it is the largest lubricating oil refinery in India accounting for over 40% of the installed capacity in the country.</p>								    
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+	
+<!-- Modal -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-body">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
+<div class="board-detail-block">
+<div class="board-mbr-item d-flex flex-column align-items-center h-100">
+<div class="board-mbr-image"><img src="../images/HMEL.jpg" alt="HPCL Rajasthan Refinery Limited (HRRL)" class="img-fit"></div>
+<div class="board-mbr-desc px-0 py-3 flex-grow-1">
+<h4>HPCL Rajasthan Refinery Limited (HRRL)</h4>                                
+<p class="board-mbr-desc-text"><strong>HPCL Rajasthan Refinery Ltd. (HRRL)</strong>&nbsp;was incorporated on 18th September, 2013, as a Joint Venture between Hindustan Petroleum Corporation Limited (HPCL) and Government of Rajasthan (GOR) with an equity participation of 74% and 26% respectively.</p>
+<p class="board-mbr-desc-text">The project involves setting up of a Greenfield 9 MMTPA Refinery cum Petrochemical Complex at Pachpadra in Barmer district of Rajasthan, with an optimum configuration and flexibility to process a mix of local and imported crudes. The project is expected to be mechanically completed within 4 years from the last date of receipt of all statutory approvals.</p>
+<p class="board-mbr-desc-text">The configuration of the Refinery shall be based on processing a    mix of 1.5 MMTPA of Rajasthan Crude and 7.5 MMTPA of imported Arab Mix crude (Arab Heavy + Arab Light) for first 8 years. From 9th year onwards, 9 MMTPA of imported Arab Mix crude can be processed. However, Refinery will have the design flexibility to process up to maximum of 2.5 MMTPA of Rajasthan Crude at any time, if the same is made available.</p>
+<p class="board-mbr-desc-text">Environmental Clearance (EC) for project was granted by Ministry of Environment, Forest &amp; Climate Change (MOEFFCC) on September 13, 2017.</p>
+<p class="board-mbr-desc-text">The project was approved by Government of India on October 09, 2017 at cost of Rs 43,129 crores (Feb 2016 price basis). The work commencement ceremony for the project was held on January 16, 2018 in the presence of Hon’ble Prime Minister of India and site activities were commenced.</p>
+<p class="board-mbr-desc-text">The products envisaged for sale from the HRRL complex are viz. BS-VI Gasoline &amp; BS-VI Diesel, Sulfur, Polypropylene, Linear Low Density Polyethylene, High Density Polyethylene, Benzene, Toluene and 1,3 Butadiene.</p>
+<p>HPCL marketing team will evacuate these products. The evacuation of the BS-VI Gasoline &amp; Diesel product will be carried out via Barmer- Palanpur Pipeline. Liquid as well as solid Petrochemical products will be evacuated through road tankers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+    <footer class="footer collapsed">
+        <div class="footer-link-wrapper">
+            <div class="container px-lg-5">
+                <div class="section-container py-5">
+                    <div class="footer-toggle-btn">
+                        +
+                    </div>
+                    <div class="row">
+        <div class="col-sm-3 mb-3 mb-md-0">
+                <div class="mb-4">
+                            <h3>About Us</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/who-we-are">Who We Are</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/vision-and-mission">Vision and Mission</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-heritage">HP Heritage</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/our-board-of-directors">Our Board of Directors</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/major-ongoing-projects">Major Ongoing Projects</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/jvs-&amp;-subsidiaries">JVs &amp; Subsidiaries</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/corporate-governance">Corporate Governance</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/rti">RTI</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/vigilance">Vigilance</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/awards-and-accolades">Awards and Accolades</a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="mb-4">
+                            <h3>Our Businesses</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-refineries">HP Refineries</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-retail">Hp Retail(Petrol Pumps)</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-gas">HP Gas (LPG)</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="https://www.hplubricants.in/">HP Lubricants</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/HP-aviation">HP Aviation </a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/Hp-directsales">HP Direct Sales</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1">HP Projects and Pipelines</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-pipeline-projects-and-operations">HP Pipeline Projects and Operations</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-engineering-and-projects">HP Engineering and Projects</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/hp-supplies-operations-and-distribution">HP Supplies, Operations and Distribution (SOD)</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-international-trade">HP International Trade</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-natural-gas-and-renewables">HP Natural Gas and Renewables</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="hp-petrochemicals">HP Petrochemicals</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-research-and-development">HP Research and Development</a>
+                                </li>
+                        </ul>
+                </div>
+        </div>
+        <div class="col-sm-3 mb-3 mb-md-0">
+                <div class="mb-4">
+                            <h3>Miscellaneous</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/code-of-conduct">Code of Conduct</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/Complaints-and-Feedback">Complaints &amp; Feedback</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/ContactUs">Contact Us</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/photogallery">Photo Gallery</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="https://www.youtube.com/hindustanpetroleum74">Video Gallery</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/Integrity-Pact">Integrity Pact</a>
+                                </li>
+                        </ul>
+                </div>
+        </div>
+        <div class="col-sm-3 mb-3 mb-md-0">
+                <div class="mb-4">
+                            <h3>Sustainability</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/sustainability">Overview</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/health-at-hpcl">Health at HPCL</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/safety-at-hpcl">Safety at HPCL</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/environment-at-hpcl">Environment at HPCL</a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="mb-4">
+                            <h3>Careers</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/careers">Overview</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/job-openings">Job Openings</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/career-contactus">Contact Us</a>
+                                </li>
+                        </ul>
+                </div>
+        </div>
+        <div class="col-sm-3 mb-3 mb-md-0">
+                <div class="mb-4">
+                            <h3>Investors</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/investors">Overview</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1">Shareholders Information</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/financialsannual">Financial and Annual Reports</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/shareholding-profile">Shareholders Profile</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/shareprice">Share Price &amp; Crude Oil Price</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/dividend-information">Dividend Information</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/postal-ballot">Postal Ballot</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/AGMDetails">AGM Details</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/analystsinstitutionalinvestorsmeet">Analysts Institutional Investor Meets</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/investors-guide">Investors Guide</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hpcl-buy-back-of-shares">HPCL Buy Back of Shares</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/policies">Policies</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/stockexchange">Stock Exchange</a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="mb-4">
+                            <a href="/newsroom"><h3>Newsroom</h3></a>
+                </div>
+                <div class="mb-4">
+                            <a href="/csr"><h3>CSR</h3></a>
+                </div>
+                <div class="mb-4">
+                            <h3>Quick Links</h3>
+                        <ul class="list-inline mb-0 footer-menu text-left">
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/business-opportunities">Business Opportunities</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/purchase-procurement">Purchase &amp; Procurement</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="https://vendor.hpcl.co.in/vendor_reg/">Vendor Registration</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="https://hproroute.hpcl.co.in/StateDistrictMap_4/index.jsp">Prices of Petrol/Diesel</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/hp-alumni">HP Alumni</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1">Life at HPCL</a>
+                                </li>
+                                <li class="list-inline-item">
+                                        <a class="py-1" href="/pages/swayam">Swayam</a>
+                                </li>
+                        </ul>
+                </div>
+        </div>
+</div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+            <div class="footer-menus text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/pages/WebPolicy">Website Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/Support">Help</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/accessibility-statement">Accessibility Statement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/sitemap">Sitemap</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" target="_blank" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" title="UN IYC" data-cf-modified-97a525c0b43673c75e33667f-=""><img alt="UN IYC" src="/images/UNIYC_logo.png" class="img-fluid" style="background-color:white" /></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.india.gov.in/" target="_blank" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" title="India Govnment" data-cf-modified-97a525c0b43673c75e33667f-=""><img alt="India Government" src="/images/india_gov_in.png" class="img-fluid" style="background-color:white" /></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://crminterface.hpcl.co.in/CRMInterface/SBAFeedback.aspx" target="_blank" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is external link, Are you sure you want to continue?');" title="swachh bharat" data-cf-modified-97a525c0b43673c75e33667f-=""><img alt="swachh bharat" src="/images/swachh-bharat.png" class="img-fluid" style="background-color:white" /></a>
+                    </li>
+                </ul>
+                <p style="color:white; font-size:0.9rem; padding-bottom:0.6rem">
+                        <span>Last updated on 10/06/2026 06:10 AM</span>
+                        <br />
+                    Copyright © 2023 - All Rights Reserved - Official Website of Hindustan Petroleum Corporation Limited, India   <br />
+                    Content on this website is Published and Managed by Hindustan Petroleum Corporation Limited<br />
+                    For any query regarding this website, please contact the "Web Information Manager" Mr. Vinod P Salunke (Public Relations & Corporate Communications Department),<br />
+                    Contact No.: +91-22-22863900, +91-22-22008243 Email ID: corphqo[at]hpcl[dot]in <br />
+                    Best viewed on "Google chrome v 80+, Firefox v 80+ and Microsoft edge".<br />
+                    Site designed & developed by <a style="text-decoration:underline" href="https://teckat.com/" onclick="if (!window.__cfRLUnblockHandlers) return false; return confirm('This is an external link, Are you sure you want to continue?');" target="_blank" data-cf-modified-97a525c0b43673c75e33667f-="">Teckat.com</a>
+                </p>
+            </div>
+    </footer>
+    <script src="/js/jquery.min.js?v=eqaw4I9IoPldjffqieTL_h7z0ejA9zc_fyXt-05KMl4" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/jquery-validate/jquery.validate.min.js?v=IiyCP9TzC8f6UbVDNIGarPDr_1vNZpHQwHbSy-PyGvw" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/jquery-validate/jquery.validate.unobtrusive.min.js?v=Yzg2IHO_hahO3fZVEzA5Z6YO6hF695wNXRIFI0SCUrg" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/bootstrap.bundle.min.js?v=UP0y3a5y6_bfe9Ph85BPXznimcqGflY_rlMTDH819WM" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/slick.js?v=5U5kTpB0pYYBpGZ9fTFcAguAoo079YSQa7NYreWDoGI" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/slick-lightbox.js?v=YibgdTr4WWf-G9z9rrEesXN1LzhLAh-lc87jy0LY19I" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/scrollreveal/scrollreveal.min.js?v=SDKDHU0lE3Q1tYhe8x3nqrEl15dwjAM3sEIP0G50RBc" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/hammer.min.js?v=3HDSH0r_gwYSX4FTdgIFq3LSz1bVN9d7MaK1xG8fSmw" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/timeline.js?v=JL_orlL7ckMW9ySnJwoUjQdRdsZvIU8n-VBRD6iSS_I" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/main.js?v=yntokj0_MoxivE4s3AuF7nthuF3RWzv4zK2O4McJCnU" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/blissaccess.js?v=ukZm6JO9_piE4DGLT8lIBRErqEvP6w9ZjUhJQfyjW-U" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script src="/js/jquery-ui.min.js" type="97a525c0b43673c75e33667f-text/javascript"></script>
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+    </script>
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        $(document).ready(function () {
+            $(".support").on("click", function () {
+                $("#form").animate({
+                    right: 0
+                }, 600);
+            });
+            $(".close").on("click", function () {
+                $("#form").animate({
+                    right: "-526px"
+                }, 1000);
+            });
+            if (location.hash) {
+                setTimeout(function () {
+                    window.scrollTo(0, 0);
+                    $('html,body').animate({
+                        scrollTop: $(window.location.hash).offset().top - 170
+                    });
+                }, 1);
+            }
+        });
+        $('#datasubmit').click(function () {
+          
+            var getinput = $('#output').val();
+            if (getinput != null && getinput != "") {
+                window.location = '/SearchResults?output=' + getinput;
+            }
+            else {
+                alert('Search Field Can not be blank !');
+                // window.location = '/';
+            }
+        });
+        $(document).on("keypress", "input", function (e) {
+          
+            if (e.which == 13) {
+                var getinput = $('#output').val();
+                if (getinput != '') {
+                    window.location = '/SearchResults?output=' + getinput;
+                }
+                else {
+                    window.location = '/';
+                }
+            }
+        });
+    </script>
+    
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        $('.read-more').popover({
+            container: 'body'
+        });
+        var timelineTextHeight = $('.timeline-text p').height();
+
+        $('#timelineMobileSlider').find('li').each(function () {
+            if (($(this).find('.timeline-text p').height()) > 60) {
+                $(this).find('.timeline-text').addClass('timeline-ellipsis');
+            }
+        });
+        $('#walkDownSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1366,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+        $('.slickPlayBtn').on('click', function (e) {
+            e.preventDefault();
+            if ($(this).hasClass("pause")) { // add class where you want to add class active for process
+                $(this).removeClass("pause");
+                $('#headerImageSlider').slick('slickPause');
+                $(this).addClass("play");
+            } else {
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+                $('#headerImageSlider').slick('slickPlay');
+            }
+        });
+
+        $('#keyperformanceSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1600,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1366,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 475,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: true
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        $(".readmore-btn").on("click", function () {
+            $(".paragraph-readmore").slideToggle();
+            if ($(this).text() == "Read More") {
+                $(this).text("Read Less")
+            } else {
+                $(this).text("Read More");
+            }
+        })
+        $('#initiativeSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1366,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+        $('#initiativeSlider').slickLightbox({
+            itemSelector: 'a',
+            navigateByKeyboard: true,
+            infinite: false,
+            closeOnBackdropClick: true,
+            caption: 'caption'
+        });
+
+        $('#leaderSpeaksSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1366,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        $('#walkDownSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1366,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        dots: false,
+                        infinite: true,
+                        autoplay: true,
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+    </script>
+
+    <script type="97a525c0b43673c75e33667f-text/javascript">
+        $('#headerImageSlider').slick({
+            dots: true,
+            infinite: true,
+            arrows: true,
+            autoplay: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true,
+            pauseOnFocus: false,
+            pauseOnHover: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                        arrows: true,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+        $('.slickPlayBtn').on('click', function (e) {
+            e.preventDefault();
+            if ($(this).hasClass("pause")) { // add class where you want to add class active for process
+                $(this).removeClass("pause");
+                $('#headerImageSlider').slick('slickPause');
+                $(this).addClass("play");
+            } else {
+                $(this).removeClass("play");
+                $(this).addClass("pause");
+                $('#headerImageSlider').slick('slickPlay');
+            }
+
+        });
+
+        $('#serviceTypeSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: true,
+            speed: 300,
+            slidesToShow: 3,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+
+
+
+
+        $('#quickAccessSlider').slick({
+            dots: false,
+            infinite: false,
+            arrows: false,
+            speed: 300,
+            slidesToShow: 6,
+            adaptiveHeight: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1,
+                        dots: true,
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
+        });
+    </script>
+
+    <script src="https://gpt.hpcl.co.in/hpchatbot/embedded-bot/integration/fluid-gpt.js" chatBotUrl="https://gpt.hpcl.co.in/hpchatbot/embedded-bot/?tenant=hpcl-vigilance" welcomeMsg="Hi, I am a HPCL GPT" logoUrl="https://gpt.hpcl.co.in/hpchatbot/embedded-bot/images/logo.png" showReferences="true" showFeedback="true" tenant="hpcl-vigilance" accessPrivateFolder="false" chatBotGreetingMsg="Hi, how may I help you?" workflowName="HP_Pay_Lubes_Workflow" headerColor="#004e8f" baseUrl="https://gpt.hpcl.co.in/hpchatbot/backend/hpcl-vigilance/public-embed" darkHeadercolor="#1C3150" headerTextColor="#FFFFFF" darkHeaderTextColor="rgb(249 250 251)" footerColor="#F2F2F2" darkFooterColor="#1C3150" footerTextColor="#858585" darkFooterTextColor="rgb(249 250 251)" bodyBackgroundColor="#FFFFFF" darkBodyBackgroundColor="rgb(17 24 39)" botMessageBackgroundColor="#F8F8F8" darkBotMessageBackgroundColor="#3A4D6A" botMessageTextColor="#037CC2" darkBotMessageTextColor="rgb(243 244 246)" userMessageTextColor="#FFFFFF" darkUserMessageTextColor="rgb(243 244 246)" userMessageBackgroundColor="#037CC2" darkUserMessageBackgroundColor="#3A4D6A" sendButtonColor="#c11032" darkSendButtonColor="rgb(249 250 251)" crossorigin="anonymous" autoOpen="false" sessionTimeoutSeconds="300" hidePoweredBy="true" workflowStreamResponse="true" multiBotButtonOne="LPG" multiBotButtonOneWorkflow="HP_Pay" multiBotButtonTwo="Retail" multiBotButtonTwoWorkflow="HP_Pay_Retail_Workflow" multiBotButtonThree="Lubes" multiBotButtonThreeWorkflow="HP_Pay_Lubes_Workflow" multiBot="true" floaterBot="true" workflowStreamResponse="true" botName="Customer Service Assisstant" botPositionX="0%" botPositionY="0%" type="97a525c0b43673c75e33667f-text/javascript"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="97a525c0b43673c75e33667f-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a2fa7eb7a960fe04',t:'MTc4NzQ5MjA2OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
