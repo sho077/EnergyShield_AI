@@ -56,6 +56,9 @@ EXPECTED_DATASET_FILES = {
     "data/reference/route_nodes.csv",
     "data/reference/sanctions.csv",
     "data/reference/energy_prices_reference.csv",
+    # Added in Phase 2 step 1 (network link layer).
+    "data/reference/network_links.csv",
+    "data/reference/pipelines.csv",
 }
 
 # The registry does not register itself; that would be circular.

@@ -9,20 +9,39 @@ is at risk, which regions are exposed, and how should flows be re-routed?
 
 ## Status
 
-**Current phase: Phase 1 — Data Foundation. Complete and validated.**
+**Phase 1 — Data Foundation: complete and validated.**
+**Phase 2, step 2 — high-impact network gaps: complete and validated.**
+**Phase 2, step 4 — targeted marine-intake evidence resolution: complete.**
+**Phase 2, step 5 — network connectivity finalisation + computed route layer: complete.**
+`PL001` and `PL005` are formally scored `PARTIALLY RESOLVED` — see
+[`docs/data_sources.md`](docs/data_sources.md#targeted-marine-intake-evidence-resolution-phase-2-step-4).
+See [`docs/phase2_report.md`](docs/phase2_report.md) for the full Phase 2
+summary and [`docs/network_connectivity_report.md`](docs/network_connectivity_report.md)
+for the graph analysis.
 
 There is still no runnable application. What exists is the *India Energy
-Network Reference Layer*: ten source-backed reference datasets, a validation
-suite that asserts their integrity, and the documentation needed to trust them.
+Network Reference Layer* — source-backed reference datasets describing the
+fixed entities of India's crude supply chain — the **edge** layer connecting
+them, a first **computed/derived** layer estimating route distances from
+that graph, and a validation suite that asserts the integrity of all three.
 No dashboard, API, database schema, agent, forecasting model, or optimisation
 engine has been written — those are deliberately out of scope until the data
 underneath them is trustworthy.
 
+**Reference data and processed data are kept strictly separate.**
+`data/reference/` holds only source-backed facts; `data/processed/` holds
+only values computed from those facts (currently: geodesic route distances),
+each carrying its own `distance_method`/`computed_at`. Neither is ever mixed
+into the other — see `docs/data_dictionary.md`'s "REFERENCE DATA vs PROCESSED
+DATA" section.
+
 | | |
 | --- | --- |
-| Reference datasets | 10 files, 168 data rows |
-| Validators | 11 scripts (10 dataset validators + 1 suite runner) |
-| Validation status | **PASS** — 10/10 validators, 0 critical failures |
+| Reference datasets | 13 files, 206 data rows |
+| Processed (computed) datasets | 2 files, 16 data rows |
+| Validators | 14 scripts (11 reference-dataset validators + network-link + computed-route + Phase 1 suite runner) |
+| Phase 1 validation | **PASS** — 10/10 validators, 0 critical failures |
+| Phase 2 validation | **PASS** — 21 network links, 5 pipelines, 9 computed routes, 7 computed segments, 0 critical failures |
 | Application code | none yet |
 | Dependency manifest | none — validators use the Python standard library only |
 | Tests | none beyond the validators |
@@ -63,8 +82,11 @@ Full documentation:
   source conflicts, staleness
 - [`docs/phase1_report.md`](docs/phase1_report.md) — what was built, what was
   not, and why
+- [`docs/phase2_report.md`](docs/phase2_report.md) — Phase 2 steps 1–5 summary
+- [`docs/network_connectivity_report.md`](docs/network_connectivity_report.md)
+  — connected components and isolated nodes in the reference network graph
 
-### Datasets
+### Datasets — REFERENCE (`data/reference/`, source-backed)
 
 | Dataset | File | Rows | Primary source | Effective | Validation |
 | --- | --- | ---: | --- | --- | --- |
@@ -78,7 +100,22 @@ Full documentation:
 | Corridor nodes | `data/reference/route_nodes.csv` | 42 | **Modelled** (nodes sourced) | 2026-08-23 | PASS |
 | Sanctions reference | `data/reference/sanctions.csv` | 8 | OFAC; UN SC; EU | 2026-08-23 | PASS |
 | Energy price reference | `data/reference/energy_prices_reference.csv` | 5 | EIA; PPAC | 2026-08-23 | PASS |
-| Source registry | `data/reference/source_registry.csv` | 27 | — (index) | 2026-08-23 | PASS |
+| Source registry | `data/reference/source_registry.csv` | 41 | — (index) | 2026-08-23 | PASS |
+| Crude pipelines *(Phase 2)* | `data/reference/pipelines.csv` | 5 | IndianOil; BPCL; HMEL | 2026-08-23 | PASS |
+| Network links *(Phase 2-3)* | `data/reference/network_links.csv` | 23 | Operator, port-authority and MoEFCC documents | 2026-08-23 | PASS |
+
+### Datasets — PROCESSED (`data/processed/`, computed/modelled)
+
+| Dataset | File | Rows | Computed from | Method | Validation |
+| --- | --- | ---: | --- | --- | --- |
+| Computed routes *(Phase 2, step 5)* | `data/processed/computed_routes.csv` | 9 | `routes.csv`, `route_nodes.csv`, `ports.csv`, `chokepoints.csv` | Geodesic (haversine) distance, partial-chain only | PASS |
+| Route segments *(Phase 2, step 5)* | `data/processed/route_segments.csv` | 7 | `ports.csv`, `chokepoints.csv` coordinates | Geodesic (haversine) distance, `R = 6371.0088 km` | PASS |
+
+**REFERENCE vs PROCESSED is a mandatory distinction in this repository.** A
+reference row states "a source published X." A processed row states "a
+stated method computed Y from sourced inputs." Neither may be substituted for
+the other, and `validate_computed_routes.py` fails if a computed value is
+ever found written back into `data/reference/routes.csv`.
 
 ### Caveats you must read before using any of this
 
@@ -143,12 +180,67 @@ These are properties of the sources, not defects to be fixed:
 - **No price value is stored anywhere in this repository** — only series
   definitions.
 
+**Network links** *(Phase 2, steps 1–2)*
+
+- An edge asserts that a **sourced connection exists**. It asserts nothing
+  about volume, throughput, current utilisation, or ownership of the shared
+  asset. Reserve edges carry **no inventory or fill-level claim**.
+- **No edge is created from geography.** Endpoints are matched by company and
+  published record name; `validate_network_links.py` rejects any row containing
+  inference wording.
+- **The absence of an edge is not evidence that no connection exists.** Every
+  candidate edge investigated and deliberately not created is listed in
+  [`docs/data_sources.md`](docs/data_sources.md), with the reason.
+- Two of five pipelines (`PL001` Salaya–Mathura, `PL005` Vadinar–Bina) have
+  **no sourced marine intake**: their coastal termini could not be resolved to
+  a port record. Steps 2 and 4 re-investigated both and closed neither to a
+  port endpoint — each is formally scored `PARTIALLY RESOLVED`: the
+  operational relationship at Vadinar is established for both, but the
+  specific port record is not.
+- Several edges carry an **in-row caveat** that survives into any downstream
+  use: `NL011` / `NL012` (Paradip SPM ownership unresolved), `NL014` (the
+  0.3 MMT commercial compartment only), `NL016` (indirect), `NL018` (evidenced
+  from the port side only), `NL019` (no SPM ownership asserted), `NL021`
+  (jurisdictional conflict between the operator's filing and `PORT002`'s own
+  Phase 1 note).
+
+**Computed routes** *(Phase 2, step 5)*
+
+- **No route has a computed distance covering its full origin-to-destination
+  span.** `suppliers.csv` and every named export terminal carry no
+  coordinate, so a distance can only ever be computed for the last,
+  coordinate-resolvable leg into India — `distance_coverage =
+  partial_last_leg_only` says this on every populated row. Three routes
+  (`RT002`, `RT005`, `RT008`) have no computable segment at all.
+- **Every computed distance is geodesic (great-circle), never a maritime
+  sailing distance.** It does not follow a shipping lane, a canal, or avoid
+  land, and must never be presented as one.
+- **No vessel-speed or transit-time assumption exists.**
+  `estimated_transit_days` is `NULL` on every row of `computed_routes.csv`,
+  for the same reason it is `NULL` on every row of `routes.csv`.
+- **`RT004`'s `via_suez` and `via_sumed` variants are not comparable.**
+  `via_sumed`'s figure omits an entire leg because `CP004` (the SUMED
+  pipeline) has no sourced coordinate — it is smaller for a structural
+  reason, not because that routing is actually shorter.
+- Full column documentation: `docs/data_dictionary.md` §§13–14. Sourcing
+  rationale: `docs/data_sources.md`
+  ("Network connectivity finalisation and the computed route layer").
+
 ## Validation
 
 ```bash
-python data/validation/validate_phase1.py            # full output
-python data/validation/validate_phase1.py --quiet    # summary table only
+python data/validation/validate_phase1.py             # Phase 1 suite, full output
+python data/validation/validate_phase1.py --quiet     # summary table only
+python data/validation/validate_network_links.py      # Phase 2 edge layer
+python data/validation/validate_computed_routes.py    # Phase 2 computed route layer
+python data/validation/validate_network_connectivity.py  # graph analysis (reporting, not pass/fail)
 ```
+
+`validate_phase1.py` runs the Phase 1 datasets only, and is deliberately left
+that way so the Phase 1 result stays a fixed, re-checkable baseline. The
+network-link and computed-route validators are run separately.
+`validate_network_connectivity.py` is a reporting tool, not a pass/fail gate —
+see [`docs/network_connectivity_report.md`](docs/network_connectivity_report.md).
 
 Exits `0` only if every validator passes. Individual validators can be run
 directly. All are **read-only** and never modify a source file. Requires Python
