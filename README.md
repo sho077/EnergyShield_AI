@@ -19,14 +19,15 @@ See [`docs/phase2_report.md`](docs/phase2_report.md) for the full Phase 2
 summary and [`docs/network_connectivity_report.md`](docs/network_connectivity_report.md)
 for the graph analysis.
 
-There is still no runnable application. What exists is the *India Energy
-Network Reference Layer* — source-backed reference datasets describing the
-fixed entities of India's crude supply chain — the **edge** layer connecting
-them, a first **computed/derived** layer estimating route distances from
-that graph, and a validation suite that asserts the integrity of all three.
-No dashboard, API, database schema, agent, forecasting model, or optimisation
-engine has been written — those are deliberately out of scope until the data
-underneath them is trustworthy.
+What exists is the *India Energy Network Reference Layer* — source-backed
+reference datasets describing the fixed entities of India's crude supply
+chain — the **edge** layer connecting them, a first **computed/derived**
+layer estimating route distances from that graph, a validation suite that
+asserts the integrity of all three, and (new) an MVP demonstration dashboard
+that reads and visualizes this data — see "MVP Demo Dashboard" below. No API,
+database schema, agent, forecasting model, or optimisation engine has been
+written — those are deliberately out of scope until the data underneath them
+is trustworthy.
 
 **Reference data and processed data are kept strictly separate.**
 `data/reference/` holds only source-backed facts; `data/processed/` holds
@@ -225,6 +226,26 @@ These are properties of the sources, not defects to be fixed:
 - Full column documentation: `docs/data_dictionary.md` §§13–14. Sourcing
   rationale: `docs/data_sources.md`
   ("Network connectivity finalisation and the computed route layer").
+
+## MVP Demo Dashboard
+
+```bash
+pip install -r dashboard/requirements.txt
+streamlit run dashboard/app.py
+```
+
+This MVP demonstrates the currently implemented reference-network and
+scenario-analysis layers. Live geopolitical feeds, maritime intelligence,
+forecasting, procurement optimization and autonomous AI agents are planned
+future layers and are not represented as operational functionality in this
+demo.
+
+The dashboard reads directly from `data/reference/` and `data/processed/` —
+every KPI, table, and map marker is computed at run time, not hardcoded.
+See [`dashboard/README.md`](dashboard/README.md) for the screen list, and
+[`docs/demo_script.md`](docs/demo_script.md) /
+[`docs/presentation_outline.md`](docs/presentation_outline.md) for the
+video/presentation materials built around it.
 
 ## Validation
 
