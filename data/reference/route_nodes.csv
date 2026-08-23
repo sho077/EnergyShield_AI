@@ -1,0 +1,43 @@
+route_id,sequence_no,node_type,node_id_or_name,node_reference_table,branch_group,source,source_url,retrieved_at
+RT001,1,origin_country,SUP001,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT001,2,sea_area,Persian Gulf,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT001,3,chokepoint,CP001,chokepoints.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT001,4,sea_area,Gulf of Oman,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT001,5,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT001,6,destination_port,PORT001,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT002,1,origin_country,SUP003,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT002,2,export_terminal,Fujairah,,,ADNOC - Murban Crude (names Fujairah as an export port serving India),https://adnoc.ae/en/our-products/murban-crude,2026-08-23
+RT002,3,sea_area,Gulf of Oman,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT002,4,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT002,5,destination_port,PORT001,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,1,origin_country,SUP001,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,2,export_terminal,Yanbu,,,EIA Country Analysis Brief: Saudi Arabia (Yanbu named as primary Red Sea crude export terminal),https://www.eia.gov/international/content/analysis/countries_long/Saudi_Arabia/pdf/Saudi-Arabia.pdf,2026-08-23
+RT003,3,sea_area,Red Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,4,chokepoint,CP002,chokepoints.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,5,sea_area,Gulf of Aden,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,6,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT003,7,destination_port,PORT006,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,1,sea_area,Mediterranean Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,2,chokepoint,CP003,chokepoints.csv,SUEZ_OR_SUMED,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,2,chokepoint,CP004,chokepoints.csv,SUEZ_OR_SUMED,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,3,sea_area,Red Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,4,chokepoint,CP002,chokepoints.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,5,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT004,6,destination_port,PORT001,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT005,1,origin_country,SUP005,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT005,2,destination_port,PORT012,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,1,origin_country,SUP006,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,2,sea_area,South Atlantic Ocean,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,3,chokepoint,CP006,chokepoints.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,4,sea_area,Indian Ocean,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,5,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT006,6,destination_port,PORT006,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,1,origin_country,SUP008,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,2,sea_area,South Atlantic Ocean,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,3,chokepoint,CP006,chokepoints.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,4,sea_area,Indian Ocean,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,5,sea_area,Arabian Sea,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT007,6,destination_port,PORT006,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT008,1,origin_country,SUP009,suppliers.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT008,2,sea_area,North Atlantic Ocean,,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23
+RT008,3,destination_port,PORT001,ports.csv,,EnergyShield-AI Phase 1 modelled corridor node,docs/data_sources.md#modelled-corridors,2026-08-23

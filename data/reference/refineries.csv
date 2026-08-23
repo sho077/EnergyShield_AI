@@ -1,0 +1,25 @@
+refinery_id,refinery_name,company,state,capacity_mmtpa,source,source_url,report_date,retrieved_at
+R001,"IOC, Digboi",INDIAN OIL CORPORATION LIMITED,ASSAM,0.65,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R002,"IOC, Guwahati",INDIAN OIL CORPORATION LIMITED,ASSAM,1.2,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R003,"IOC, Koyali",INDIAN OIL CORPORATION LIMITED,GUJARAT,13.7,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R004,"IOC, Barauni",INDIAN OIL CORPORATION LIMITED,BIHAR,6.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R005,"IOC, Haldia",INDIAN OIL CORPORATION LIMITED,WEST BENGAL,8.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R006,"IOC, Mathura",INDIAN OIL CORPORATION LIMITED,UTTAR PRADESH,8.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R007,"IOC, Panipat",INDIAN OIL CORPORATION LIMITED,HARYANA,15.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R008,"IOC, Bongaigaon",INDIAN OIL CORPORATION LIMITED,ASSAM,2.7,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R009,"IOC, Paradip",INDIAN OIL CORPORATION LIMITED,ODISHA,15.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R010,"HPC, Mumbai",HINDUSTAN PETROLEUM CORPORATION LIMITED,MAHARASHTRA,9.5,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R011,"HPC, Visakh",HINDUSTAN PETROLEUM CORPORATION LIMITED,ANDHRA PRADESH,15.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R012,"BPC, Mumbai",BHARAT PETROLEUM CORPORATION LIMITED,MAHARASHTRA,12.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R013,"BPC, Kochi",BHARAT PETROLEUM CORPORATION LIMITED,KERALA,15.5,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R014,"BPC, Bina",BHARAT PETROLEUM CORPORATION LIMITED,MADHYA PRADESH,7.8,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R015,"CPCL,Manali",CHENNAI PETROLEUM CORPORATION LIMITED,CHENNAI,10.5,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R016,"CPCL, Cauvery Basin*",CHENNAI PETROLEUM CORPORATION LIMITED,CHENNAI,0.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R017,"NRL, Numaligarh",NUMALIGARH REFINERY LIMITED,ASSAM,3.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R018,"ONGC, Tatipaka",OIL AND NATURAL GAS CORPORATION,ANDHRA PRADESH,0.066,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R019,"MRPL, Mangalore",MANGALORE REFINERY AND PETROCHEMICALS LIMITED,KARNATAKA,15.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R020,"HMEL, GGSR",HPCL–MITTAL ENERGY LIMITED,PUNJAB,11.3,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R021,"HRRL, Pachpadra",HPCL Rajasthan Refinery Limited,RAJASTHAN,9.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R022,"RIL, Jamnagar",RELIANCE INDUSTRIES LIMITED,GUJARAT,33.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R023,"RPL (SEZ), Jamnagar",RELIANCE INDUSTRIES LIMITED,GUJARAT,35.2,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23
+R024,"NEL, Vadinar",NAYARA ENERGY LIMITED,GUJARAT,20.0,PPAC Installed Refining Capacity – April 2026,https://ppac.gov.in/infrastructure/installed-refinery-capacity,2026-04-01,2026-08-23

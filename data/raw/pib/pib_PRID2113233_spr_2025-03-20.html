@@ -1,0 +1,1011 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" />
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" /><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: #444;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+      <script>
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+
+
+
+            gtag('config', 'UA-112591026-1');
+
+      </script>
+
+<meta property="og:title" content="Government steps to Strengthen Strategic Petroleum Reserves" /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=2113233" /><meta property="og:description" content="Government, through a Special Purpose Vehicle called Indian Strategic Petroleum Reserve Limited (ISP" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eqausaeezemjcjqacqhqeaaaabvivmz5-f-f0a4ab795-clienttons-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":25,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"2e0433ca","ak.r":37398,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":61086,"ak.gh":"23.55.108.5","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1787474749","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==6HjXy9tXB4uyzpl5L4kFeKtsI4KtuDQDgu2ppPQR/G0r/67WqBdfyzp0IclnsVXF6QV2ON0ajOhLZorjp858y+ZkAxUIuI+bIB3nsnX/pXCPc1+lpiqYD+x4FHNE6qJQVuBzM9YkVrQ0sJ3ZkGs9hrpNo+20POJ+Oy70b8dxxVrWFmBNX9SZdbdvC7SFv5OWVIuE+MCdQH3ZTj/0WNvTb3UcjZ3ZbzwOysZCARDQkkFAZpKis0RQJgsypI+K2rY7KmI9uIpX9atGkBvUuXmit9JRX5jamVIn3Oo4Sdxc6QLkx4S/LvKL6kfhE8amasStOK9zBC6sYsoJZY2axCncksTyGMeJuG8TGTuiNEsZHNEFmrjPioegiwr8X5LeWmH+4y1PocEaqwfzdjtKVGSjTRzT/J3G8RTZAKIUln5D1S4=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+      <form method="post" action="./PressReleasePage.aspx?PRID=2113233&amp;reg=48&amp;lang=2" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=b94hX14NMWluUQ9a73g0LYFvtKhY52TK8cbDkYB_F2GuPre4tdh-ebiiI4xuhXnRu6Q5dQjaQA4oN3PEeL0GrtKEyEY1&amp;t=638942408819057530" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=YwOa_0w_u3oCLFqmIIOf-XEz4GWZ1DuyQIpxIA4LVkywj39sZSps12NbK5wNl5XN9JF3m7d-ey7BFDgj6i0380qRQ5IMWCL54sYNVU1IjMmiOWpp0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_shmykYI80CxCNR43Ii1nLy9PBGhuSe6SPp3CEYu0wDEuLqDAuIcsXVNhTIgQn0iyiwPorMflXuK31FftDX9GnB0m366MCEoOmY-eKQ3YAO9xRL0gIigzgRbtbVOgSQkJbJpFg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="lmU3l4DN6M4TDQiE+Oj3YKPGs6Wc685aaaGxgttaRroPoz4bmOzZTMjQfmkqEiEIfZSZGwfDyWs6/gKHSdH29/RHLNHrDUxWkG4W/ZJ6kjpF2qvPUpJ7F93n2eidhSmVvHa6xcHgnv/RrNVrB7HQYwZiMPpcbexDS1hubBm41i4/oZxtEVOrp1+0dDXKMwW8wAtU1we+ca66LHKC0aQeImp2s3/J1zBnjXNqT7KLaQCmCHa2SvtQ8GpL7WKZRyMG3y27FGuoFuLIkzTg3GC8lbMxnbeqbTvMlVplDDfIfK8XPk/c" />
+</div>
+                              
+            <div id="templateCss"></div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</div>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="2113233" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Petroleum & Natural Gas
+                        </div>
+                        
+                        <div id="lg_g"><div class='log_oo'>  <img src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2021/aug/ph202183101.png' alt='azadi ka amrit mahotsav' /> </div></div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h2 id="Titleh2">
+                                    Government steps to Strengthen Strategic Petroleum Reserves
+                              </h2>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              प्रविष्टि तिथि:
+                20 MAR 2025 3:36PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:black">Government, through a Special Purpose Vehicle called Indian Strategic Petroleum Reserve Limited (ISPRL), has established Strategic Petroleum Reserves (SPR) facilities with total capacity of 5.33 Million Metric Tonnes (MMT) of crude oil at 3 locations namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT) capacity. </span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:black">To further augment the SPR capacity, Government, in July 2021, had also approved the establishment of two additional commercial-cum-strategic petroleum reserve facilities with total storage capacity of 6.5 MMT at Chandikhol (4 MMT) in Odisha and Padur (2.5 MMT) in Karnataka, on a Public Private Partnership mode. </span>Government and OMCs evaluate, from time to time, the possibility of augmentation of storage capacities based on technical and commercial feasibility. <span style="color:black">Assessment of new sites for establishing additional petroleum reserves is a continuous process.</span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To ensure security of crude supplies and to mitigate the risk of dependence on crude oil from single region, Indian Oil Public Sector Undertakings (PSUs) have diversified their crude basket and are procuring crude from countries located at various geographical locations viz. Middle East, Africa, North America, South America etc. Further, Government has already diversified the import of LNG by adding Australia, USA and UAE as sourcing destinations. India has also signed various long term agreements for procurement of LNG for ensuring uninterrupted supplies and safeguearding from price volatility.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To counter the reliance on fossil fuels, <span style="background-color:white"><span style="color:black">Government has adopted a multi-pronged strategy to promote clean energy which, inter alia, include:</span></span></span></span></p>
+
+<ul style="margin-left:40px">
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Demand substitution by promoting usage of natural gas as fuel/feedstock across the country towards increasing the share of natural gas in economy and moving towards gas based economy.</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Promotion of renewable and alternate fuels like ethanol, second generation ethanol, compressed bio gas, biodiesel,</span></span> Green Hydrogen and Evs.</span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;R<span style="background-color:white"><span style="color:black">efinery process improvements, promoting energy efficiency and conservation,</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Efforts for increasing production of oil and natural gas through various policies initiatives, etc. For promoting the use of Compressed Bio Gas (CBG) as automotive fuel, Sustainable Alternative Towards Affordable Transportation (SATAT) initiative has also been launched.</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;To promote the use of biofuels across the country, various programmes, such as Ethanol Blended Petrol (EBP) Programme, wherein Oil Marketing Companies<span style="background-color:white"><span style="color:black"> (OMCs) sell petrol blended with ethanol, Biodiesel blending programme wherein biodiesel is blended with diesel, have been taken up.</span></span></span></span></li>
+</ul>
+
+<p style="margin-right:-4.1pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This information was given by the THE MINISTER OF STATE IN THE MINISTRY OF PETROLEUM AND NATURAL GAS SHRI SURESH GOPI, in a written reply in Lok Sabha today.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>*****</strong></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Monika</strong></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(रिलीज़ आईडी: 2113233)</span>
+                        <span id="lblViews">	आगंतुक पटल  : 6886</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">इस विज्ञप्ति को इन भाषाओं में पढ़ें: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2113338' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2113259' target="_blank">
+                                          हिन्दी </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2113265' target="_blank">
+                                          Tamil </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=2113473' target="_blank">
+                                          Telugu </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Petroleum & Natural Gas
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          Government steps to Strengthen Strategic Petroleum Reserves
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          प्रविष्टि तिथि:
+                        20 MAR 2025 3:36PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:black">Government, through a Special Purpose Vehicle called Indian Strategic Petroleum Reserve Limited (ISPRL), has established Strategic Petroleum Reserves (SPR) facilities with total capacity of 5.33 Million Metric Tonnes (MMT) of crude oil at 3 locations namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT) capacity. </span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="color:black">To further augment the SPR capacity, Government, in July 2021, had also approved the establishment of two additional commercial-cum-strategic petroleum reserve facilities with total storage capacity of 6.5 MMT at Chandikhol (4 MMT) in Odisha and Padur (2.5 MMT) in Karnataka, on a Public Private Partnership mode. </span>Government and OMCs evaluate, from time to time, the possibility of augmentation of storage capacities based on technical and commercial feasibility. <span style="color:black">Assessment of new sites for establishing additional petroleum reserves is a continuous process.</span></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To ensure security of crude supplies and to mitigate the risk of dependence on crude oil from single region, Indian Oil Public Sector Undertakings (PSUs) have diversified their crude basket and are procuring crude from countries located at various geographical locations viz. Middle East, Africa, North America, South America etc. Further, Government has already diversified the import of LNG by adding Australia, USA and UAE as sourcing destinations. India has also signed various long term agreements for procurement of LNG for ensuring uninterrupted supplies and safeguearding from price volatility.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">To counter the reliance on fossil fuels, <span style="background-color:white"><span style="color:black">Government has adopted a multi-pronged strategy to promote clean energy which, inter alia, include:</span></span></span></span></p>
+
+<ul style="margin-left:40px">
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Demand substitution by promoting usage of natural gas as fuel/feedstock across the country towards increasing the share of natural gas in economy and moving towards gas based economy.</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Promotion of renewable and alternate fuels like ethanol, second generation ethanol, compressed bio gas, biodiesel,</span></span> Green Hydrogen and Evs.</span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;R<span style="background-color:white"><span style="color:black">efinery process improvements, promoting energy efficiency and conservation,</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><span style="background-color:white"><span style="color:black">&nbsp;Efforts for increasing production of oil and natural gas through various policies initiatives, etc. For promoting the use of Compressed Bio Gas (CBG) as automotive fuel, Sustainable Alternative Towards Affordable Transportation (SATAT) initiative has also been launched.</span></span></span></span></li>
+	<li style="text-align: justify;"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">&nbsp;To promote the use of biofuels across the country, various programmes, such as Ethanol Blended Petrol (EBP) Programme, wherein Oil Marketing Companies<span style="background-color:white"><span style="color:black"> (OMCs) sell petrol blended with ethanol, Biodiesel blending programme wherein biodiesel is blended with diesel, have been taken up.</span></span></span></span></li>
+</ul>
+
+<p style="margin-right:-4.1pt; text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This information was given by the THE MINISTER OF STATE IN THE MINISTRY OF PETROLEUM AND NATURAL GAS SHRI SURESH GOPI, in a written reply in Lok Sabha today.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>*****</strong></span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px"><strong>Monika</strong></span></span></p>
+
+<p style="text-align:justify">&nbsp;</p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (रिलीज़ आईडी: 2113233)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&text=Government steps to Strengthen Strategic Petroleum Reserves' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Government steps to Strengthen Strategic Petroleum Reserves&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&title=Government steps to Strengthen Strategic Petroleum Reserves&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&text=Government steps to Strengthen Strategic Petroleum Reserves' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Government steps to Strengthen Strategic Petroleum Reserves&body=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=2113233&title=Government steps to Strengthen Strategic Petroleum Reserves&summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Government steps to Strengthen Strategic Petroleum Reserves" />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:black&quot;>Government, through a Special Purpose Vehicle called Indian Strategic Petroleum Reserve Limited (ISPRL), has established Strategic Petroleum Reserves (SPR) facilities with total capacity of 5.33 Million Metric Tonnes (MMT) of crude oil at 3 locations namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT) capacity. &lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;color:black&quot;>To further augment the SPR capacity, Government, in July 2021, had also approved the establishment of two additional commercial-cum-strategic petroleum reserve facilities with total storage capacity of 6.5 MMT at Chandikhol (4 MMT) in Odisha and Padur (2.5 MMT) in Karnataka, on a Public Private Partnership mode. &lt;/span>Government and OMCs evaluate, from time to time, the possibility of augmentation of storage capacities based on technical and commercial feasibility. &lt;span style=&quot;color:black&quot;>Assessment of new sites for establishing additional petroleum reserves is a continuous process.&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>To ensure security of crude supplies and to mitigate the risk of dependence on crude oil from single region, Indian Oil Public Sector Undertakings (PSUs) have diversified their crude basket and are procuring crude from countries located at various geographical locations viz. Middle East, Africa, North America, South America etc. Further, Government has already diversified the import of LNG by adding Australia, USA and UAE as sourcing destinations. India has also signed various long term agreements for procurement of LNG for ensuring uninterrupted supplies and safeguearding from price volatility.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>To counter the reliance on fossil fuels, &lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;>Government has adopted a multi-pronged strategy to promote clean energy which, inter alia, include:&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;ul style=&quot;margin-left:40px&quot;>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;>&amp;nbsp;Demand substitution by promoting usage of natural gas as fuel/feedstock across the country towards increasing the share of natural gas in economy and moving towards gas based economy.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;>&amp;nbsp;Promotion of renewable and alternate fuels like ethanol, second generation ethanol, compressed bio gas, biodiesel,&lt;/span>&lt;/span> Green Hydrogen and Evs.&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&amp;nbsp;R&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;>efinery process improvements, promoting energy efficiency and conservation,&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;>&amp;nbsp;Efforts for increasing production of oil and natural gas through various policies initiatives, etc. For promoting the use of Compressed Bio Gas (CBG) as automotive fuel, Sustainable Alternative Towards Affordable Transportation (SATAT) initiative has also been launched.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/li>
+	&lt;li style=&quot;text-align: justify;&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&amp;nbsp;To promote the use of biofuels across the country, various programmes, such as Ethanol Blended Petrol (EBP) Programme, wherein Oil Marketing Companies&lt;span style=&quot;background-color:white&quot;>&lt;span style=&quot;color:black&quot;> (OMCs) sell petrol blended with ethanol, Biodiesel blending programme wherein biodiesel is blended with diesel, have been taken up.&lt;/span>&lt;/span>&lt;/span>&lt;/span>&lt;/li>
+&lt;/ul>
+
+&lt;p style=&quot;margin-right:-4.1pt; text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>This information was given by the THE MINISTER OF STATE IN THE MINISTRY OF PETROLEUM AND NATURAL GAS SHRI SURESH GOPI, in a written reply in Lok Sabha today.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>*****&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>&lt;strong>Monika&lt;/strong>&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&amp;nbsp;&lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: rgb(59, 89, 152);*/
+                        background-color: rgba(65,103,178,255);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: #000000;
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: rgb(77, 194, 71);*/
+                        background-color: rgba(13,191,67,255);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: rgb(219, 68, 55);*/
+                        background-color: #e2123d;
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: rgb(0, 119, 181);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: 20px !important;
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: 18px !important;
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 18px, #6e2b8b 18px, #6e2b8b 36px );
+                        border-top: 8px solid #9a2375;
+                        border-bottom: 8px solid #9a2375;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="OFFtHBgvVnnSc-uVRJNKwDp9_rA3paxlV4GDH1Ph5YvP9gMH4m3ODMMr3OJqbmpcun0lRat2pPz47W_nuV8400n6yT10fcOs4E7D58E1J-bylNGO2-qSFQ=="/></form>
+</body>
+</html>
+

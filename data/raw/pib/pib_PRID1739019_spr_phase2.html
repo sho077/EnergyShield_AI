@@ -1,0 +1,970 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><title>
+	Press Release Page | Press Information Bureau
+</title><link href="css/style.css" rel="stylesheet" type="text/css" /><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><link rel="alternate stylesheet" href="css/change.css" media="screen" title="change" /><link rel="alternate stylesheet" href="css/green.css" media="screen" title="green" /><link rel="alternate stylesheet" href="css/yellow.css" media="screen" title="yellow" /><link rel="stylesheet" type="text/css" href="css/prtint.css" media="print" /><link rel="stylesheet" href="css/style3.1.css" type="text/css" />
+
+
+      <script src="js/jquery.min.js" type="text/javascript"></script>
+      <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" /><link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet" />
+
+      <script type="text/javascript">
+            $(document).ready(function () {
+                  function getParameterByName(name) {
+                        var url = window.location.href;
+                        name = name.replace(/[\[\]]/g, '\\$&');
+                        var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                              results = regex.exec(url);
+                        if (!results) return null;
+                        if (!results[2]) return '';
+                        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+                  }
+                  // Get the IDs from the current page's URL
+                  let prid = parseInt(getParameterByName('PRID'), 10);
+
+                  if (!isNaN(prid) && prid > 0) {
+                        $.ajax({
+                              type: "POST",
+                              url: "AjaxMethod.aspx/UpdatePRHitCount",
+                              async: false,
+                              data: JSON.stringify({ 'PermId': prid }),
+                              contentType: "application/json; charset=utf-8",
+                              dataType: "json",
+                              success: function (response) {
+                                    console.log(response);
+                              },
+                              error: function (error) {
+                                    console.log("Error in AJAX request", error);
+                              }
+                        });
+                  } else {
+                        console.log("Invalid parameters:", prid);
+                  }
+
+            });
+      </script>
+      <style type="text/css">
+            .table-responsive {
+                  width: 100%;
+                  overflow-x: auto;
+            }
+
+            .banner {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+                  background-color: #000;
+                  color: #fff;
+                  padding: 20px;
+            }
+
+            full-width {
+                  width: 100%;
+            }
+
+            .logo-left, .logo-center, .countdown {
+                  display: flex;
+                  align-items: center;
+            }
+
+                  .logo-left img, .logo-center img {
+                        height: 70px;
+                  }
+
+            .countdown {
+                  text-align: center;
+                  background-color: #444;
+                  border-radius: 10px;
+                  padding: 10px;
+                  border: 2px solid grey;
+            }
+
+            .firstnumber {
+                  color: #000000;
+                  position: absolute;
+                  top: 50px;
+                  right: 90px;
+                  font-size: 30px;
+            }
+
+            .secondnumber {
+                  position: absolute;
+                  color: #000000;
+                  right: 45px;
+                  top: 50px;
+                  font-size: 30px;
+            }
+
+            .countdown .days {
+                  font-size: 35px;
+                  color: gold;
+            }
+
+            .countdown p {
+                  margin: 0;
+            }
+
+            .countdown .text {
+                  font-size: 16px;
+            }
+
+            a {
+                  word-break: break-all;
+            }
+
+            iframe, img {
+                  max-width: 100%;
+            }
+
+            @media(max-width:1199px) {
+                  .firstnumber {
+                        top: 40px;
+                        right: 72px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 35px;
+                        top: 40px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:990px) {
+                  .firstnumber {
+                        top: 25px;
+                        right: 54px;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 25px;
+                        top: 25px;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:768px) {
+                  .countdown, .days {
+                        font-size: 12px !important;
+                  }
+
+
+                  .firstnumber {
+                        top: 25%;
+                        right: 8%;
+                        font-size: 30px;
+                  }
+
+                  .secondnumber {
+                        right: 4.5%;
+                        top: 25%;
+                        font-size: 30px;
+                  }
+            }
+
+            @media(max-width:475px) {
+                  .countdown, .days {
+                        font-size: 10px !important;
+                        top: 20%;
+                  }
+
+                  .bannerimgdiv {
+                        padding: 0 !important;
+                  }
+
+                  .bannerimg {
+                        width: 108% !important;
+                  }
+            }
+      </style>
+      <script type="text/javascript">
+            $(function () {
+                  $("[id*=printPDF]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+            $(function () {
+                  $("[id*=printPDFEvent]").click(function () {
+                        $("[id*=hfGridHtml]").val($("#PdfDiv").html());
+                  });
+            });
+      </script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112591026-1"></script>
+      <script>
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() { dataLayer.push(arguments); }
+
+            gtag('js', new Date());
+
+
+
+            gtag('config', 'UA-112591026-1');
+
+      </script>
+
+<meta property="og:title" content="Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme " /><meta property="og:url" content="www.pib.gov.in/Pressreleaseshare.aspx?PRID=1739019" /><meta property="og:description" content="Under Phase I of strategic petroleum reserves (SPR) programme, Government of India, through its Spec" /><meta property="og:image" content="https:/pib.gov.in/images/indian-emblem.png" />
+                                <script>!function(e){var n="https://s.go-mpulse.net/boomerang/";if("False"=="True")e.BOOMR_config=e.BOOMR_config||{},e.BOOMR_config.PageParams=e.BOOMR_config.PageParams||{},e.BOOMR_config.PageParams.pci=!0,n="https://s2.go-mpulse.net/boomerang/";if(window.BOOMR_API_key="C4E7H-KSCMC-422L4-W3EM5-U36MF",function(){function e(){if(!i){var e=document.createElement("script");e.id="boomr-scr-as",e.src=window.BOOMR.url,e.async=!0,o.parentNode.appendChild(e),i=!0}}function t(e){i=!0;var n,t,a,r,d=document,O=window;if(window.BOOMR.snippetMethod=e?"if":"i",t=function(e,n){var t=d.createElement("script");t.id=n||"boomr-if-as",t.src=window.BOOMR.url,BOOMR_lstart=(new Date).getTime(),e=e||d.body,e.appendChild(t)},!window.addEventListener&&window.attachEvent&&navigator.userAgent.match(/MSIE [67]\./))return window.BOOMR.snippetMethod="s",void t(o.parentNode,"boomr-async");a=document.createElement("IFRAME"),a.src="about:blank",a.title="",a.role="presentation",a.loading="eager",r=(a.frameElement||a).style,r.width=0,r.height=0,r.border=0,r.display="none",o.parentNode.appendChild(a);try{O=a.contentWindow,d=O.document.open()}catch(_){n=document.domain,a.src="javascript:var d=document.open();d.domain='"+n+"';void(0);",O=a.contentWindow,d=O.document.open()}if(n)d._boomrl=function(){this.domain=n,t()},d.write("<bo"+"dy onload='document._boomrl();'>");else if(O._boomrl=function(){t()},O.addEventListener)O.addEventListener("load",O._boomrl,!1);else if(O.attachEvent)O.attachEvent("onload",O._boomrl);d.close()}function a(e){window.BOOMR_onload=e&&e.timeStamp||(new Date).getTime()}if(!window.BOOMR||!window.BOOMR.version&&!window.BOOMR.snippetExecuted){window.BOOMR=window.BOOMR||{},window.BOOMR.snippetStart=(new Date).getTime(),window.BOOMR.snippetExecuted=!0,window.BOOMR.snippetVersion=12,window.BOOMR.url=n+"C4E7H-KSCMC-422L4-W3EM5-U36MF";var o=document.currentScript||document.getElementsByTagName("script")[0],i=!1,r=document.createElement("link");if(r.relList&&"function"==typeof r.relList.supports&&r.relList.supports("preload")&&"as"in r)window.BOOMR.snippetMethod="p",r.href=window.BOOMR.url,r.rel="preload",r.as="script",r.addEventListener("load",e),r.addEventListener("error",function(){t(!0)}),setTimeout(function(){if(!i)t(!0)},3e3),BOOMR_lstart=(new Date).getTime(),o.parentNode.appendChild(r);else t(!1);if(window.addEventListener)window.addEventListener("load",a,!1);else if(window.attachEvent)window.attachEvent("onload",a)}}(),"".length>0)if(e&&"performance"in e&&e.performance&&"function"==typeof e.performance.setResourceTimingBufferSize)e.performance.setResourceTimingBufferSize();!function(){if(BOOMR=e.BOOMR||{},BOOMR.plugins=BOOMR.plugins||{},!BOOMR.plugins.AK){var n=""=="true"?1:0,t="",a="eqausaeezemjcjqacqhqeaaaabvivmz6-f-6433e0a3e-clienttons-s.akamaihd.net",o="false"=="true"?2:1,i={"ak.v":"41","ak.cp":"1825201","ak.ai":parseInt("1215205",10),"ak.ol":"0","ak.cr":28,"ak.ipv":6,"ak.proto":"http/1.1","ak.rid":"19fdcd14","ak.r":37398,"ak.a2":n,"ak.m":"dscb","ak.n":"ff","ak.cport":52633,"ak.gh":"23.55.108.12","ak.quicv":"","ak.tlsv":"tls1.3","ak.0rtt":"","ak.0rtt.ed":"","ak.csrc":"-","ak.acc":"bbr","ak.t":"1787474750","ak.ak":"hOBiQwZUYzCg5VSAfCLimQ==ZmT/Jr8eY0SSJEvQbKz+cBjhxg8ZcYDNomdb9d/G27dcH28IwYJScqzEr/oaaKEy0hlZkiu/TN7rzI1FF0FjgQEYj4BZriKwo3DO9EuJj3FGbiPblUj/AOnJ4IhA5/E6v0dg+tpa9utwyckBQgzKs99S3bmFLYnWrVb6cM726GY3vmXne4hFaiWVzXxU4boT3Fql56rkhKZMjLvh5hoxJEQmt3gKqbMBisHtvP1aIK6rqreBHkYP1l7kQoandUEwBxOGzBO4x+G6FkAzjvG9N9uD0oX63DY3f3vc/tBBdnsrSf/xmYcU6+8rG3fzcEMo2DNuHPWNBDi6VS5IkYFhP/x0njvTLuhXdNK+aLay5WF2j9yjLv7NDUydmiBIOwVD+Y5dhyuoFhvNZZpfBwMwmRrEzuqYOQ0ZE4+Vglwc8oM=","ak.pv":"9","ak.dpoabenc":"","ak.tf":o};if(""!==t)i["ak.ruds"]=t;var r={i:!1,av:function(n){var t="http.initiator";if(n&&(!n[t]||"spa_hard"===n[t]))i["ak.feo"]=void 0!==e.aFeoApplied?1:0,BOOMR.addVar(i)},rv:function(){var e=["ak.cport","ak.cr","ak.csrc","ak.gh","ak.ipv","ak.m","ak.n","ak.ol","ak.proto","ak.quicv","ak.tlsv","ak.0rtt","ak.0rtt.ed","ak.r","ak.acc","ak.t","ak.tf"];BOOMR.removeVar(e)}};BOOMR.plugins.AK={akVars:i,akDNSPreFetchDomain:a,init:function(){if(!r.i){var e=BOOMR.subscribe;e("before_beacon",r.av,null,null),e("onbeacon",r.rv,null,null),r.i=!0}return this},is_complete:function(){return!0}}}}()}(window);</script></head>
+<body>
+      <form method="post" action="./PressReleasePage.aspx?PRID=1739019&amp;reg=48&amp;lang=2" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="sc_HiddenField" id="sc_HiddenField" value="" />
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=b94hX14NMWluUQ9a73g0LYFvtKhY52TK8cbDkYB_F2GuPre4tdh-ebiiI4xuhXnRu6Q5dQjaQA4oN3PEeL0GrtKEyEY1&amp;t=638942408819057530" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=YwOa_0w_u3oCLFqmIIOf-XEz4GWZ1DuyQIpxIA4LVkywj39sZSps12NbK5wNl5XN9JF3m7d-ey7BFDgj6i0380qRQ5IMWCL54sYNVU1IjMmiOWpp0&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/ScriptResource.axd?d=_shmykYI80CxCNR43Ii1nLy9PBGhuSe6SPp3CEYu0wDEuLqDAuIcsXVNhTIgQn0iyiwPorMflXuK31FftDX9GnB0m366MCEoOmY-eKQ3YAO9xRL0gIigzgRbtbVOgSQkJbJpFg2&amp;t=ffffffffecf8d3f2" type="text/javascript"></script>
+<script src="/PressReleasePage.aspx?_TSM_HiddenField_=sc_HiddenField&amp;_TSM_CombinedScripts_=%3b%3bAjaxControlToolkit%2c+Version%3d3.5.7.123%2c+Culture%3dneutral%2c+PublicKeyToken%3d28f01b0e84b6d53e%3aen-US%3a5a4df314-b4a2-4da2-a207-9284f1b1e96c%3ade1feab2%3af2c8e708%3a720a52bf%3af9cec9bc%3a589eaa30%3aa67c2700%3aab09e3fe%3a87104b7c%3a8613aea7%3a3202a5a2%3abe6fb298" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="59B53027" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="vdjJ/N74B2+Mbg6fIxVFBTgpb77T/L0r9CG78hPh+L7c4/w5bGDrcoFUmeqdq21HlAmtfanYVk4Kx6MfK+LArHCPtiGBz1Z8QEsq3q7SPrjezWYrFEX/iiy0fcRi/zUcre8Sy2lUelx8Z8L/84IWOWS06yenIhnuukjzgrqeMD0G1632Dh/Tr1o7ZBToMNg+LVjrGg5NiaasrXamZzv28ut/qOHuuAr1e6lODZ+M155NrgjHcCtvCNwz3jcagEH2vmlxkarH+rC+VjnoXTpJaTENo+jKJ+S9tawAJba3J1yTjUmA" />
+</div>
+                              
+            <div id="templateCss"></div>
+            <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('sc', 'form1', ['tupdate12','update12'], [], [], 90, '');
+//]]>
+</script>
+
+            <input type="hidden" name="hfGridHtml" id="hfGridHtml" />
+            <div class="container" style='margin-bottom: 50px;'>
+                  <div id="accessories">
+
+                        
+                        <div class="pull-right" style="display: flex">
+                              <div id="voll"></div>
+                              <div id="vollDT"></div>
+                              
+                              
+<div class="print-icons">
+<input type="image" name="Print1$print" id="Print1_print" aria-label="Print" src="images/printer_icon.png" alt="print page button" style="padding: 5px 10px 5px 10px;" />
+</div>
+                        </div>
+                  </div>
+                  <input type="hidden" name="hydpermid" id="hydpermid" value="1739019" />
+                  
+
+
+
+                  <div class="innner-page-main-about-us-content-right-part">
+
+                        <div id="MinistryName" class="MinistryNameSubhead text-center">
+                              Ministry of Petroleum & Natural Gas
+                        </div>
+                        
+                        <div id="lg_g">
+                        </div>
+
+
+
+
+
+                        <div class="text-center event-heading-background">
+                              
+                              <h2 id="Titleh2">
+                                    Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme 
+                              </h2>
+                              <h3 id="Subtitleh3">
+                                    <span id="ltrSubtitle"></span>
+                              </h3>
+                        </div>
+
+                        <div id="PrDateTime" class="ReleaseDateSubHeaddateTime text-center pt20">
+                              प्रविष्टि तिथि:
+                26 JUL 2021 2:18PM by PIB Delhi
+                        </div>
+                        
+                        <div class='pt20'>
+                        </div>
+                        <input type="hidden" name="hydphotoUrl" id="hydphotoUrl" />
+                        
+                        <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Under Phase I of strategic petroleum reserves (SPR) programme, Government of India, through its Special Purpose Vehicle, Indian Strategic Petroleum Reserve Limited (ISPRL), has established petroleum storage facilities with total capacity of 5.33 Million Metric Tonnes (MMT) at 3 locations, namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT), and all the storage facilities have been filled with crude oil.&nbsp;The petroleum reserves established under Phase I are strategic in nature and the crude oil stored in these reserves will be used during an oil shortage event, as and when declared so by Government of India.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Under Phase II of the petroleum reserve programme, Government has given approval in July 2021 for establishing two additional commercial-cum-strategic facilities with total storage capacity of 6.5 MMT underground storages at Chandikhol (4 MMT) and Padur (2.5 MMT) on PPP mode.&nbsp; The Request for Proposal for building these storage facilities is under finalization. An amount of INR 210 crore was allocatedin the budget of FY 2020-21under Phase II for land acquisition, and same has been disbursed to ISPRL.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">As per the section 9(2) of the Central Goods and Services Tax Act, inclusion of excluded products in GST will require recommendation of the GST Council. So far, the GST Council has not made any recommendation for inclusion of petrol and diesel under GST.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This information was given by the Minister of State for Petroleum and Natural Gas Shri Rameswar Teli in a written reply in the Lok Sabha today.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">YB/SS</span></span></p>
+
+
+                        
+                        <div id="reel_pic">
+                        </div>
+
+
+
+                        
+                        <br />
+                        <span id="ReleaseId">(रिलीज़ आईडी: 1739019)</span>
+                        <span id="lblViews">	आगंतुक पटल  : 3915</span>
+                        <div>
+                              
+                        </div>
+                        
+
+                        <span id="lblRefPhoto"></span>
+
+                        <div class="BackgroundRelease">
+                              
+                        </div>
+                        <div>
+                              
+                        </div>
+                        <div class="ReleaseLang">इस विज्ञप्ति को इन भाषाओं में पढ़ें: 
+                        
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1739202' target="_blank">
+                                          Urdu </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1739292' target="_blank">
+                                          Punjabi </a>
+                              
+                                    ,
+                              
+                                    
+                                    <a href='https://pib.gov.in/PressReleasePage.aspx?PRID=1739165' target="_blank">
+                                          Tamil </a>
+                              
+                        </div>
+
+                        <div class="RelTag">
+                              <ul>
+                                    
+                              </ul>
+                        </div>
+                        <div class="clear">
+                        </div>
+                        <div id="RelLink" class="RelLink">
+                              <ul>
+                                    
+                                    
+                              </ul>
+                        </div>
+                        <center>
+                              
+                        </center>
+                  </div>
+
+                  <div id="update12">
+	
+                              
+                              <input type="hidden" name="Hidden" id="Hidden" />
+                              <div id="P_CategoryManagement" class="ModalWindow" style="border-width:0px;height:60%;width:60%;overflow:auto;display: none">
+		
+                                    <div>
+                                          <input type="image" name="btnClose" id="btnClose" src="images/close_flat_icon.png" />
+                                    </div>
+                                    <div id="description">
+                                    </div>
+                                    <div class="text-center">
+                                          <h2>
+                                                
+                                                <br>
+                                                
+                                          </h2>
+                                    </div>
+                                    <br />
+                                    <div class="clear">
+                                    </div>
+                                    
+                              
+	</div>
+                        
+</div>
+            </div>
+            
+            <div id="PdfDiv" style="display: none;">
+                  <table width="100%">
+                        <tr>
+                              <td style="font-weight: 200; text-align: center">
+                                    Ministry of Petroleum & Natural Gas
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme 
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: center; font-size: 30px;">
+                                          
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="text-align: center; font-size: 14px;">
+                                          प्रविष्टि तिथि:
+                        26 JUL 2021 2:18PM by PIB Delhi
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 200; text-align: left; font-size: 16px;">
+                                          <p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Under Phase I of strategic petroleum reserves (SPR) programme, Government of India, through its Special Purpose Vehicle, Indian Strategic Petroleum Reserve Limited (ISPRL), has established petroleum storage facilities with total capacity of 5.33 Million Metric Tonnes (MMT) at 3 locations, namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT), and all the storage facilities have been filled with crude oil.&nbsp;The petroleum reserves established under Phase I are strategic in nature and the crude oil stored in these reserves will be used during an oil shortage event, as and when declared so by Government of India.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">Under Phase II of the petroleum reserve programme, Government has given approval in July 2021 for establishing two additional commercial-cum-strategic facilities with total storage capacity of 6.5 MMT underground storages at Chandikhol (4 MMT) and Padur (2.5 MMT) on PPP mode.&nbsp; The Request for Proposal for building these storage facilities is under finalization. An amount of INR 210 crore was allocatedin the budget of FY 2020-21under Phase II for land acquisition, and same has been disbursed to ISPRL.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">As per the section 9(2) of the Central Goods and Services Tax Act, inclusion of excluded products in GST will require recommendation of the GST Council. So far, the GST Council has not made any recommendation for inclusion of petrol and diesel under GST.</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">This information was given by the Minister of State for Petroleum and Natural Gas Shri Rameswar Teli in a written reply in the Lok Sabha today.</span></span></p>
+
+<p style="text-align:center"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">*****</span></span></p>
+
+<p style="text-align:justify"><span style="font-family:Times New Roman,Times,serif"><span style="font-size:16px">YB/SS</span></span></p>
+
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                                    <div style="font-weight: 100; text-align: left; font-size: 16px;">
+                                          (रिलीज़ आईडी: 1739019)
+                                    </div>
+                                    <div style="height: 30px; width: 100%;">
+                                    </div>
+                              </td>
+                        </tr>
+                        <tr>
+                              <td style="font-weight: 200; text-align: center; font-size: 24px;"></td>
+                        </tr>
+                  </table>
+            </div>
+            <div class="clearfix">
+            </div>
+
+            
+
+            <div class="section1">
+                  <div id="frst_t">
+                        <div id="arr_rm"><div class='sticky-social_mb'><ul class='social_mb'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='40' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&text=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme ' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='40' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='40' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme &body=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='40' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&title=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme &summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='40' /></li></a></ul></div></div>
+                  </div>
+                  <div id="second_t">
+                        <div id="sndr_rm"><div class='sticky-social'><ul class='social'><a href='http://www.facebook.com/share.php?u=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019' target='_blank'><li class='fb_b'   ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/facebook.jpg' alt='Share on facebook'  width='35' /></li></a><a href='https://twitter.com/intent/tweet?url=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&text=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme ' target='_blank'><li class='twitter_r'  ><img  src='https://static.pib.gov.in/WriteReadData/specificdocs/photo/2023/aug/ph2023818240601.jpg' alt='Share on twitter' width='35' /> </li></a><a href='https://api.whatsapp.com/send?text=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019' target='_blank'><li class='whatsapp_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/whatsapp1.png' alt='Share on whatsapp' width='35' /></li></a><a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=&su=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme &body=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&ui=2&tf=1&pli=1' title='Share by Email' target='_blank'><li class='fa-envelope_r' ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/email1.png' alt='Share on email'  width='35' /></li></a><a href='https://www.linkedin.com/shareArticle?mini=true&url=https://pib.gov.in/PressReleasePage.aspx?PRID=1739019&title=Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme &summary=My%20favorite%20developer%20program&source=LinkedIn' target='_blank'><li class='fa-linkedin_r'  ><img  src='https://static.pib.gov.in/WriteReadData/userfiles/socialmedianew/linkedin.png' alt='Share on linkedin' width='35' /></li></a></ul></div></div>
+                  </div>
+            </div>
+            <input type="hidden" name="ltrTitlee" id="ltrTitlee" value="Two more commercial-cum-strategic facilities of 6.5 MMTstorage capacity to be established under phase-2 of SPR Programme " />
+            <input type="hidden" name="ltrSubtitlee" id="ltrSubtitlee" />
+            <input type="hidden" name="ltrDescriptionn" id="ltrDescriptionn" value="&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Under Phase I of strategic petroleum reserves (SPR) programme, Government of India, through its Special Purpose Vehicle, Indian Strategic Petroleum Reserve Limited (ISPRL), has established petroleum storage facilities with total capacity of 5.33 Million Metric Tonnes (MMT) at 3 locations, namely (i) Vishakhapatnam (1.33 MMT), (ii) Mangaluru (1.5 MMT) and (iii) Padur (2.5 MMT), and all the storage facilities have been filled with crude oil.&amp;nbsp;The petroleum reserves established under Phase I are strategic in nature and the crude oil stored in these reserves will be used during an oil shortage event, as and when declared so by Government of India.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>Under Phase II of the petroleum reserve programme, Government has given approval in July 2021 for establishing two additional commercial-cum-strategic facilities with total storage capacity of 6.5 MMT underground storages at Chandikhol (4 MMT) and Padur (2.5 MMT) on PPP mode.&amp;nbsp; The Request for Proposal for building these storage facilities is under finalization. An amount of INR 210 crore was allocatedin the budget of FY 2020-21under Phase II for land acquisition, and same has been disbursed to ISPRL.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>As per the section 9(2) of the Central Goods and Services Tax Act, inclusion of excluded products in GST will require recommendation of the GST Council. So far, the GST Council has not made any recommendation for inclusion of petrol and diesel under GST.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>This information was given by the Minister of State for Petroleum and Natural Gas Shri Rameswar Teli in a written reply in the Lok Sabha today.&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:center&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>*****&lt;/span>&lt;/span>&lt;/p>
+
+&lt;p style=&quot;text-align:justify&quot;>&lt;span style=&quot;font-family:Times New Roman,Times,serif&quot;>&lt;span style=&quot;font-size:16px&quot;>YB/SS&lt;/span>&lt;/span>&lt;/p>
+" />
+            <script type="text/javascript">
+                  var mPlayer = document.getElementById("background_music");
+                  var mPlayAction = document.getElementById("playbutton");
+
+                  var isPlaying = false;
+
+                  function playAudio() {
+                        mPlayer.play();
+                        isPlaying = true;
+                        document.getElementById('stopA').style.display = "block";
+                        document.getElementById('playA').style.display = "none";
+                  }
+
+                  function pauseAudio() {
+                        mPlayer.pause();
+                        isPlaying = false;
+                        document.getElementById('playA').style.display = "block";
+                        document.getElementById('stopA').style.display = "none";
+                  }
+                  //function HandleAudio() {
+                  //    if (isPlaying == true) {
+                  //        //Playing already Pause it
+                  //        pauseAudio();
+                  //    } else {
+                  //        //Play the music
+                  //        playAudio();
+                  //    }
+                  //}
+            </script>
+            <script type="text/javascript">
+                  var synth = window.speechSynthesis;
+
+            
+                  function CleanHtml(html) {
+
+                        html = html.replace(/<script[\s\S]*?<\/script>/gi, '');
+
+                        return html;
+                  }
+                  function stripHtml(html) {
+                        let tmp = document.createElement("DIV");
+                        tmp.innerHTML = CleanHtml(html);
+                        return tmp.textContent || tmp.innerText || "";
+                  }
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        //for responsive tables
+                        $("table").each(function () {
+                              if (!$(this).closest(".table-responsive").length) {
+                                    $(this).wrap("<div class='table-responsive'></div>");
+                              }
+                        });
+
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            <script type="text/javascript">
+                  $(document).ready(function () {
+                        var width = $(window).width();
+                        if (width < 768) {
+
+                              // Extra Small Device
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+
+                        } else if (width < 991) {
+                              document.getElementById('frst_t').style.display = "block";
+                              document.getElementById('second_t').style.display = "none";
+                              // Small Device
+
+                        } else if (width < 1199) {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Medium Device
+
+                        } else {
+                              document.getElementById('frst_t').style.display = "none";
+                              document.getElementById('second_t').style.display = "block";
+                              // Large Device
+
+                        }
+                  });
+            </script>
+            
+            <style type="text/css">
+                  @media print {
+                        .sticky-social, .sticky-social_mb, .pull-right, #printPDF {
+                              display: none !important;
+                        }
+                  }
+
+                  .f_vl {
+                        padding-right: 30px;
+                        font-size: 17px;
+                        cursor: pointer;
+                  }
+
+                  .log_oo {
+                        // width: 20%;
+                        display: flex;
+                        justify-content: space-between;
+                  }
+
+                        .log_oo img {
+                              width: 150px;
+                              /*width: 100%;
+                    height: auto;*/
+                        }
+
+                  .sticky-social_mb {
+                        position: fixed;
+                        bottom: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                        width: 100%;
+                  }
+
+                  .social_mb {
+                        list-style: none;
+                        display: flex;
+                        width: 100%;
+                        margin-bottom: -8px;
+                  }
+
+                        .social_mb a {
+                              padding: 8px 0px;
+                              font-size: 30px;
+                              transition: all 0.8s ease-in-out;
+                              width: 20% !important;
+                              text-align: center;
+                        }
+            </style>
+            <style type="text/css">
+                  .section1 {
+                        position: relative;
+                        padding: 10px 0px;
+                        width: 100%;
+                  }
+
+
+
+                  .sticky-social {
+                        position: fixed;
+                        top: 20px;
+                        left: 0px;
+                        padding: 0px;
+                        margin: 0px;
+                  }
+
+                  .social {
+                        list-style: none;
+                  }
+
+                        .social a li {
+                              padding: 8px 12px;
+                              font-size: 25px;
+                              transition: all 0.8s ease-in-out;
+                        }
+
+                              .social a li:hover {
+                                    margin-right: -30px;
+                                    box-shadow: 2px 5px 10px grey;
+                              }
+
+                                    .social a li:hover .fa {
+                                          margin-left: 20px;
+                                    }
+
+                  .fb_b {
+                        /* background-color: rgb(59, 89, 152);*/
+                        background-color: rgba(65,103,178,255);
+                  }
+
+                  .twitter_r {
+                        /* background-color: rgb(29, 161, 242);*/
+                        background-color: #000000;
+                  }
+
+                  .whatsapp_r {
+                        /* background-color: rgb(77, 194, 71);*/
+                        background-color: rgba(13,191,67,255);
+                  }
+
+                  .fa-envelope_r {
+                        /* background-color: rgb(219, 68, 55);*/
+                        background-color: #e2123d;
+                  }
+
+                  .fa-linkedin_r {
+                        background-color: rgb(0, 119, 181);
+                  }
+            </style>
+            <style type="text/css">
+                  @media only screen and (max-device-width: 767px) {
+                        p span img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        p img {
+                              max-width: 90% !important;
+                              height: auto !important;
+                        }
+
+                        h2 {
+                              font-size: 20px !important;
+                              font-weight: 600 !important;
+                        }
+
+                        h3 {
+                              font-size: 18px !important;
+                              font-weight: 600 !important;
+                        }
+                  }
+            </style>
+            <style type="text/css">
+                  /* === Film Roll Badge Styling(IFFI2025 countdown) === */
+                  .film-roll-badge {
+                        position: absolute;
+                        top:82%;
+                        right: 20px;
+                        width: 230px;
+                        height: 70px;
+                        background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 18px, #6e2b8b 18px, #6e2b8b 36px );
+                        border-top: 8px solid #9a2375;
+                        border-bottom: 8px solid #9a2375;
+                        border-radius: 8px;
+                        overflow: hidden;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+                        animation: moveFilm 8s linear infinite;
+                        z-index: 10;
+                  }
+
+                        /* film sprocket holes */
+                        .film-roll-badge::before,
+                        .film-roll-badge::after {
+                              content: "";
+                              position: absolute;
+                              width: 100%;
+                              height: 10px;
+                              background: repeating-linear-gradient( to right, #9a2375 0px, #9a2375 10px, #fff 10px, #fff 20px );
+                              left: 0;
+                              z-index: 2;
+                        }
+
+                        .film-roll-badge::before {
+                              top: -4px;
+                        }
+
+                        .film-roll-badge::after {
+                              bottom: -4px;
+                        }
+
+                  .film-roll-inner {
+                        position: relative;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        animation: flicker 2s infinite ease-in-out;
+                  }
+
+                  .countdown-text {
+                        font-size: 1.3rem;
+                        font-weight: 700;
+                        color: #fff;
+                        text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 0 0 10px #000;
+                        white-space: nowrap;
+                  }
+
+                  /* === Animations === */
+                  @keyframes moveFilm {
+                        0% {
+                              background-position: 0 0;
+                        }
+
+                        100% {
+                              background-position: 120px 0;
+                        }
+                  }
+
+                  @keyframes flicker {
+                        0%, 100% {
+                              opacity: 1;
+                        }
+
+                        50% {
+                              opacity: 0.9;
+                        }
+
+                        25% {
+                              opacity: 0.95;
+                        }
+
+                        75% {
+                              opacity: 0.85;
+                        }
+                  }
+
+                  /* === Responsive Adjustments === */
+                  @media (max-width: 1500px) {
+                        .film-roll-badge {
+                              top: 68%;
+                              right: 18px;
+                              /* width: 220px; */
+                              height: 65px;
+                              font-size: 0.85rem;
+                        }
+
+                        .press-section {
+                              margin-top: 35px;
+                        }
+                  }
+
+                  @media (max-width: 992px) {
+                        .film-roll-badge {
+                              top: 52%;
+                              right: 10px;
+                               width: 200px; 
+                              height: 60px;
+                        }
+                  }
+
+                  @media (max-width: 768px) {
+                        .film-roll-badge {
+                              top: 56%;
+                              right: 10px;
+                               width: 124px; 
+                              height: 55px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.9rem;
+                        }
+                  }
+
+                  @media (max-width: 576px) {
+                        .film-roll-badge {
+                              top: 59%;
+                              right: 5px;
+                              /* width: 160px; */
+                              height: 50px;
+                        }
+
+                        .countdown-text {
+                              font-size: 0.85rem;
+                        }
+                  }
+            </style>
+          <script type="text/javascript">
+                const festivalStart = new Date("2025-11-20T00:00:00").getTime();
+                const festivalEnd = new Date("2025-11-28T23:59:59").getTime();
+
+                const countdownElement = document.getElementById("countdown");
+
+                const interval = setInterval(() => {
+                      const now = new Date().getTime();
+
+                      // BEFORE FESTIVAL — show days + hours left
+                      if (now < festivalStart) {
+                            const diff = festivalStart - now;
+                            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+                            countdownElement.innerHTML = `
+              ${days} Day${days !== 1 ? 's' : ''} 
+              ${hours} Hour${hours !== 1 ? 's' : ''} to go
+          `;
+
+                      }
+
+                      // DURING FESTIVAL — show 56th IFFI - Day X
+                      else if (now >= festivalStart && now <= festivalEnd) {
+                            const dayNumber = Math.floor((now - festivalStart) / (1000 * 60 * 60 * 24)) + 1;
+                            countdownElement.innerHTML = `56th IFFI - Day ${dayNumber}`;
+                      }
+
+                      // AFTER FESTIVAL — new message
+                      else {
+                            countdownElement.innerHTML = `✨ IFFI closes but never ends…`;
+
+                            // Width change logic
+                            const elements = document.querySelectorAll('.film-roll-badge');
+                            elements.forEach(el => el.style.width = "350px");
+
+                            clearInterval(interval);
+                      }
+
+                }, 1000);
+          </script>
+ <script type="text/javascript">
+
+               const miffStart = new Date("2026-06-15T00:00:00").getTime();
+               const miffEnd = new Date("2026-06-15T23:59:59").getTime();
+
+               const miffElement = document.getElementById("miff");
+
+               if (miffElement) {
+
+                   const miffInterval = setInterval(() => {
+
+                       const now = new Date().getTime();
+
+                       // Before MIFF
+                       if (now < miffStart) {
+
+                           const diff = miffStart - now;
+                           const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                           const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+        
+
+                   /*  miffElement.innerHTML = `${days} Day${days !== 1 ? 's' : ''} ${hours} Hour${hours !== 1 ? 's' : ''} to MIFF`;*/
+                           miffElement.innerHTML = `${days} Day${days === 1 ? '' : 's'} to MIFF ...`;
+
+
+                     }
+
+                       // During MIFF
+                       else if (now >= miffStart && now <= miffEnd) {
+
+                           const dayNumber =
+                               Math.floor((now - miffStart) / (1000 * 60 * 60 * 24)) + 1;
+
+                           miffElement.innerHTML = `19th MIFF - Day ${dayNumber}`;
+                       }
+
+                       // After MIFF
+                       else {
+
+                           miffElement.innerHTML = `✨ MIFF concludes, cinema lives on...`;
+
+                           document.querySelectorAll('.film-roll-badge')
+                               .forEach(el => el.style.width = "350px");
+
+                           clearInterval(miffInterval);
+                       }
+
+                   }, 1000);
+               }
+
+</script>
+
+      
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get("sc_HiddenField").value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modalBackground","PopupControlID":"P_CategoryManagement","dynamicServicePath":"/PressReleasePage.aspx","id":"mpe"}, null, null, $get("Hidden"));
+});
+//]]>
+</script>
+<input type="hidden" name="__ncforminfo" value="bLxMsWrm35Ksp1-JRqQVGng7kPCZ34a51xPJFb1wHCa8aKkZx_5rxJCJjb5g-YBpesj9t686uYlGrssFjK-Xc9kG1L05s8xOiM3RZZw41qwHojQqel4Kow=="/></form>
+</body>
+</html>
+
