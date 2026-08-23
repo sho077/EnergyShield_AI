@@ -1,0 +1,78 @@
+/* EnergyShield AI — command-center dark theme */
+
+:root {
+    --bg-0: #0a0e14;
+    --bg-1: #0f141d;
+    --bg-2: #141a24;
+    --border: #232b38;
+    --text-0: #e8ecf2;
+    --text-1: #99a3b3;
+    --accent: #3fb6ff;
+    --accent-dim: #1c4f6e;
+    --green: #35d38a;
+    --amber: #f2b84b;
+    --red: #ef5a6f;
+}
+
+.stApp {
+    background: var(--bg-0);
+    color: var(--text-0);
+    font-family: "Inter", "Segoe UI", -apple-system, sans-serif;
+}
+
+section[data-testid="stSidebar"] {
+    background: var(--bg-1);
+    border-right: 1px solid var(--border);
+}
+
+h1, h2, h3, h4 {
+    color: var(--text-0) !important;
+    letter-spacing: 0.01em;
+}
+
+.es-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.es-badge-demo { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent); }
+.es-badge-green { background: rgba(53,211,138,0.12); color: var(--green); border: 1px solid var(--green); }
+.es-badge-amber { background: rgba(242,184,75,0.12); color: var(--amber); border: 1px solid var(--amber); }
+.es-badge-red { background: rgba(239,90,111,0.12); color: var(--red); border: 1px solid var(--red); }
+.es-badge-gray { background: rgba(153,163,179,0.12); color: var(--text-1); border: 1px solid var(--text-1); }
+
+.es-card {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 14px 16px;
+}
+
+.es-kpi-value {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--text-0);
+    line-height: 1.1;
+}
+.es-kpi-label {
+    font-size: 0.72rem;
+    color: var(--text-1);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+}
+
+.es-hero {
+    background: linear-gradient(135deg, rgba(63,182,255,0.08), rgba(15,20,29,0.4));
+    border: 1px solid var(--accent-dim);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.es-divider { border-top: 1px solid var(--border); margin: 14px 0; }
+
+.es-mono { font-family: "SF Mono", "Consolas", monospace; font-size: 0.85rem; color: var(--text-1); }
